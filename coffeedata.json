@@ -33,41 +33,47 @@ Calories => calories per ounce
       "name": "Chemex",
       "caffeine": 145,
       "size": 8,
-      "calories": 2,
+      "calories": 0.25,
       "price": "",
-      "flavor": "..."
+      "flavor": "...",
+      "gramsPerCup": 24
+      
     },
     {
       "name": "Siphon",
       "caffeine": 130,
       "size": 8,
-      "calories": 2,
+      "calories": 0.25,
       "price": "",
-      "flavor": "..."
+      "flavor": "...",
+      "gramsPerCup": 24
     },
     {
       "name": "Espresso",
       "caffeine": 77,
       "size": 1.5,
-      "calories": 1,
+      "calories": 0.6667,
       "price": "",
-      "flavor": "..."
+      "flavor": "...",
+      "gramsPerCup": 24
     },
     {
       "name": "Iced",
       "caffeine": 95,
       "size": 8,
-      "calories": 1,
+      "calories": 0.125,
       "price": "",
-      "flavor": "..."
+      "flavor": "...",
+      "gramsPerCup": 24
     },
     {
       "name": "Turkish",
       "caffeine": 50,
       "size": 2,
-      "calories": 18,
+      "calories": 9.0,
       "price": "",
-      "flavor": "..."
+      "flavor": "...",
+      "gramsPerCup": 24
     }
     
   ],
@@ -132,6 +138,6 @@ Calories => calories per ounce
       "calories": 74,
       "flavor": 0.3,
       "price": 0.19
-    },
+    }
   ]
 }
