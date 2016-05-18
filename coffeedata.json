@@ -1,24 +1,21 @@
-/*
-The JSON below represnts is dicided into three main parts, beans, method and roasts.
-All data is fairly straight forward with a few exceptions.
-Price => USD per ounce
-Flavor: Negative => makes the coffe more bitter, Positive => while a postive flavor adds sweetness.
-Size => ounces of coffee per cup
-Calories => calories per ounce
-*/
-
 {  
   "beans": [
     {
       "name": "Arabica",
       "caffeine_scalar": 1.0,
-      "flavor": -.025
+      "flavor": -.025,
+      "caffeine": 1.0,
+      "flavor": -.025,
+      "price": 0.30503
     },
     
     {
       "name": "Robusta",
       "caffeine_scalar": 1.62,
-      "flavor": -.05
+      "flavor": -.05,
+      "caffeine": 1.62,
+      "flavor": -.05,
+      "price": 0.17974
     }
     
   ],
@@ -28,7 +25,7 @@ Calories => calories per ounce
       "name": "Chemex",
       "caffeine": 145,
       "size": 8,
-      "calories": "",
+      "calories": 2,
       "price": "",
       "flavor": "..."
     },
@@ -36,7 +33,7 @@ Calories => calories per ounce
       "name": "Siphon",
       "caffeine": 130,
       "size": 8,
-      "calories": "",
+      "calories": 2,
       "price": "",
       "flavor": "..."
     },
@@ -44,7 +41,7 @@ Calories => calories per ounce
       "name": "Espresso",
       "caffeine": 77,
       "size": 1.5,
-      "calories": "",
+      "calories": 1,
       "price": "",
       "flavor": "..."
     },
@@ -52,7 +49,7 @@ Calories => calories per ounce
       "name": "Iced",
       "caffeine": 95,
       "size": 8,
-      "calories": "",
+      "calories": 1,
       "price": "",
       "flavor": "..."
     },
@@ -60,7 +57,7 @@ Calories => calories per ounce
       "name": "Turkish",
       "caffeine": 50,
       "size": 2,
-      "calories": "",
+      "calories": 18,
       "price": "",
       "flavor": "..."
     }
