@@ -3,13 +3,15 @@
     {
       "name": "Arabica",
       "caffeine": 1.0,
-      "flavor": -.025
+      "flavor": -.025,
+      "price": 0.30503
     },
     
     {
       "name": "Robusta",
       "caffeine": 1.62,
-      "flavor": -.05
+      "flavor": -.05,
+      "price": 0.17974
     }
     
   ],
@@ -19,7 +21,7 @@
       "name": "Chemex",
       "caffeine": 145,
       "size": 8,
-      "calories": "",
+      "calories": 2,
       "price": "",
       "flavor": "..."
     },
@@ -27,7 +29,7 @@
       "name": "Siphon",
       "caffeine": 130,
       "size": 8,
-      "calories": "",
+      "calories": 2,
       "price": "",
       "flavor": "..."
     },
@@ -35,7 +37,7 @@
       "name": "Espresso",
       "caffeine": 77,
       "size": 1.5,
-      "calories": "",
+      "calories": 1,
       "price": "",
       "flavor": "..."
     },
@@ -43,7 +45,7 @@
       "name": "Iced",
       "caffeine": 95,
       "size": 8,
-      "calories": "",
+      "calories": 1,
       "price": "",
       "flavor": "..."
     },
@@ -51,7 +53,7 @@
       "name": "Turkish",
       "caffeine": 50,
       "size": 2,
-      "calories": "",
+      "calories": 18,
       "price": "",
       "flavor": "..."
     }
