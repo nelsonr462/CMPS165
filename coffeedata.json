@@ -1,14 +1,23 @@
-{
+/*
+The JSON below represnts is dicided into three main parts, beans, method and roasts.
+All data is fairly straight forward with a few exceptions.
+Price => USD per ounce
+Flavor: Negative => makes the coffe more bitter, Positive => while a postive flavor adds sweetness.
+Size => ounces of coffee per cup
+Calories => calories per ounce
+*/
+
+{  
   "beans": [
     {
       "name": "Arabica",
-      "caffeine": 1.0,
+      "caffeine_scalar": 1.0,
       "flavor": -.025
     },
     
     {
       "name": "Robusta",
-      "caffeine": 1.62,
+      "caffeine_scalar": 1.62,
       "flavor": -.05
     }
     
