@@ -3,13 +3,13 @@
     {
       "name": "Arabica",
       "caffeine": 1.0,
-      "flavor":"..."
+      "flavor": -.025
     },
     
     {
       "name": "Robusta",
       "caffeine": 1.62,
-      "flavor":"..."
+      "flavor": -.05
     }
     
   ],
@@ -62,74 +62,62 @@
     {
       "name": "Light",
       "caffeine": 1.06,
-      "flavor": "..."
+      "flavor": -.3
     },
     {
       "name": "Medium",
       "caffeine": 1,
-      "flavor": "..."
+      "flavor": -.1
     },
     {
       "name": "Dark",
       "caffeine": 1.06,
-      "flavor": "..."
+      "flavor": -.2
     }
   ],
   
   "mods": [
     {
+      "type": "milk",
       "name": "Milk",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 17.5,
+      "flavor": 0.1,
+      "price": 0.04
     },
     {
+      "type": "milk",
       "name": "Almond Milk",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 3.75,
+      "flavor": 0.1,
+      "price": 0.08
     },
     {
+      "type": "milk",
       "name": "Soy Milk",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 12.5,
+      "flavor": 0.1,
+      "price": 0.07
     },
     {
-      "name": "Cream",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
-    },
-    {
-      "name": "Half and Half",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
-    },
-    {
+      "type": "sweetener",
       "name": "Sugar",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 111,
+      "flavor": 0.2,
+      "price": 0.06
     },
     {
+      "type": "sweetener",
       "name": "Honey",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 86,
+      "flavor": 0.3,
+      "price": 0.37
     },
     {
+      "type": "sweetener",
       "name": "Syrup",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
+      "calories": 74,
+      "flavor": 0.3,
+      "price": 0.19
     },
-    {
-      "name": "Sweetener",
-      "calories": "...",
-      "flavor": "...",
-      "price": "..."
-    }
   ]
 }
