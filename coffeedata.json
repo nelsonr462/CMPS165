@@ -1,0 +1,135 @@
+{
+  "beans": [
+    {
+      "name": "Arabica",
+      "caffeine": 1.0,
+      "flavor":"..."
+    },
+    
+    {
+      "name": "Robusta",
+      "caffeine": 1.62,
+      "flavor":"..."
+    }
+    
+  ],
+    
+  "methods": [
+    {
+      "name": "Chemex",
+      "caffeine": 145,
+      "size": 8,
+      "calories": "",
+      "price": "",
+      "flavor": "..."
+    },
+    {
+      "name": "Siphon",
+      "caffeine": 130,
+      "size": 8,
+      "calories": "",
+      "price": "",
+      "flavor": "..."
+    },
+    {
+      "name": "Espresso",
+      "caffeine": 77,
+      "size": 1.5,
+      "calories": "",
+      "price": "",
+      "flavor": "..."
+    },
+    {
+      "name": "Iced",
+      "caffeine": 95,
+      "size": 8,
+      "calories": "",
+      "price": "",
+      "flavor": "..."
+    },
+    {
+      "name": "Turkish",
+      "caffeine": 50,
+      "size": 2,
+      "calories": "",
+      "price": "",
+      "flavor": "..."
+    }
+    
+  ],
+    
+  "roasts": [
+    {
+      "name": "Light",
+      "caffeine": 1.06,
+      "flavor": "..."
+    },
+    {
+      "name": "Medium",
+      "caffeine": 1,
+      "flavor": "..."
+    },
+    {
+      "name": "Dark",
+      "caffeine": 1.06,
+      "flavor": "..."
+    }
+  ],
+  
+  "mods": [
+    {
+      "name": "Milk",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Almond Milk",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Soy Milk",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Cream",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Half and Half",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Sugar",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Honey",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Syrup",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    },
+    {
+      "name": "Sweetener",
+      "calories": "...",
+      "flavor": "...",
+      "price": "..."
+    }
+  ]
+}
