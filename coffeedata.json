@@ -92,28 +92,28 @@ var data =
     }
   ],
   
-  "mods": [
+  "milk": [
     {
-      "type": "milk",
       "name": "Cow Milk",
       "calories": 17.5,
       "flavor": 0.1,
       "price": 0.04
     },
     {
-      "type": "milk",
       "name": "Almond Milk",
       "calories": 3.75,
       "flavor": 0.1,
       "price": 0.08
     },
     {
-      "type": "milk",
       "name": "Soy Milk",
       "calories": 12.5,
       "flavor": 0.1,
       "price": 0.07
-    },
+    }
+  ],
+  
+  "sweetener": [    
     {
       "type": "sweetener",
       "name": "Sugar",
