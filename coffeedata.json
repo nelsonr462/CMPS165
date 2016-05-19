@@ -11,18 +11,16 @@ var data =
   "beans": [
     {
       "name": "Arabica",
-      "caffeine_scalar": 1.0,
-      "flavor": -.025,
-      "caffeine": 1.0,
-      "price": 0.30503
+      "base_caffeine_scalar": 1.0,
+      "bean_flavor": -.025,
+      "bean_price": 0.30503
     },
     
     {
       "name": "Robusta",
-      "caffeine_scalar": 1.62,
-      "flavor": -.05,
-      "caffeine": 1.62,
-      "price": 0.17974
+      "base_caffeine_scalar": 1.62,
+      "bean_flavor": -.05,
+      "bean_price": 0.17974
     }
     
   ],
@@ -30,43 +28,43 @@ var data =
   "methods": [
     {
       "name": "Chemex",
-      "caffeine": 145,
+      "caffeine_mg": 145,
       "size": 8,
-      "calories": 0.25,
-      "flavor": 0.25,
+      "calorie_ounce_method": 0.25,
+      "method_flavor": 0.25,
       "gramsPerCup": 24
       
     },
     {
       "name": "Siphon",
-      "caffeine": 130,
+      "caffeine_mg": 130,
       "size": 8,
-      "calories": 0.25,
-      "flavor": 0.25,
+      "calorie_ounce_method": 0.25,
+      "method_flavor": 0.25,
       "gramsPerCup": 24
     },
     {
       "name": "Espresso",
-      "caffeine": 77,
+      "caffeine_mg": 77,
       "size": 1.5,
-      "calories": 0.6667,
-      "flavor": -0.3,
+      "calorie_ounce_method": 0.6667,
+      "method_flavor": -0.3,
       "gramsPerCup": 8
     },
     {
       "name": "Cold Brew",
-      "caffeine": 95,
+      "caffeine_mg": 95,
       "size": 8,
-      "calories": 0.125,
-      "flavor": 0.3,
+      "calorie_ounce_method": 0.125,
+      "method_flavor": 0.3,
       "gramsPerCup": 53
     },
     {
       "name": "Turkish",
-      "caffeine": 50,
+      "caffeine_mg": 50,
       "size": 2,
-      "calories": 9.0,
-      "flavor": -0.4,
+      "calorie_ounce_method": 9.0,
+      "method_flavor": -0.4,
       "gramsPerCup": 6
     }
     
@@ -75,63 +73,60 @@ var data =
   "roasts": [
     {
       "name": "Light",
-      "caffeine": 1.06,
-      "flavor": -.3
+      "caffeine_scalar": 0.06,
+      "roast_flavor": -0.3
     },
     {
       "name": "Medium",
-      "caffeine": 1,
-      "flavor": -.1
+      "caffeine_scalar": 0,
+      "roast_flavor": -0.1
     },
     {
       "name": "Dark",
-      "caffeine": 1.06,
-      "flavor": -.2
+      "caffeine_scalar": -0.04,
+      "roast_flavor": -0.2
     }
   ],
   
   "milk": [
     {
       "name": "Cow Milk",
-      "calories": 17.5,
-      "flavor": 0.1,
-      "price": 0.04
+      "calorie_ounce_milk": 17.5,
+      "milk_flavor": 0.1,
+      "milk_price": 0.04
     },
     {
       "name": "Almond Milk",
-      "calories": 3.75,
-      "flavor": 0.1,
-      "price": 0.08
+      "calorie_ounce_milk": 3.75,
+      "milk_flavor": 0.1,
+      "milk_price": 0.08
     },
     {
       "name": "Soy Milk",
-      "calories": 12.5,
-      "flavor": 0.1,
-      "price": 0.07
+      "calorie_ounce_milk": 12.5,
+      "milk_flavor": 0.1,
+      "milk_price": 0.07
     }
   ],
   
   "sweetener": [
     {
-      "type": "sweetener",
       "name": "Sugar",
-      "calories": 111,
-      "flavor": 0.2,
-      "price": 0.06
+      "calorie_ounce_sweetener": 111,
+      "sweetener_flavor": 0.2,
+      "sweetener_price": 0.06
     },
     {
-      "type": "sweetener",
       "name": "Honey",
-      "calories": 86,
-      "flavor": 0.3,
-      "price": 0.37
+      "calorie_ounce_sweetener": 86,
+      "sweetener_flavor": 0.3,
+      "sweetener_price": 0.37
     },
     {
-      "type": "sweetener",
       "name": "Syrup",
-      "calories": 74,
-      "flavor": 0.3,
-      "price": 0.19
+      "calorie_ounce_sweetener": 74,
+      "sweetener_flavor": 0.3,
+      "sweetener_price": 0.19
     }
   ]
 }
