@@ -1,4 +1,53 @@
 .main {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    width: 98% !important;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main .bean {
+    width:150px;
+    height:180px;
+    padding: 20px 40px 0px 40px;
+}
+
+.main .roast {
+    width: 70%;
+}
+
+.main .milk {
+    width:150px;
+    height:180px;
+    padding: 40px;
+}
+
+.main .sweetener {
+    width:150px;
+    height:180px;
+    padding: 40px;
+}
+
+.row {
+    padding: 50px 10px 50px 10px;
+}
+
+.image {
+    padding-bottom:10px;
+}
+
+.beanLabel {
+    margin: -15px auto auto auto;
+}
+
+.turkish {
+    margin: auto auto auto -30px;
+}
+
+.image {
+    width:150px;
+    height:180px;
+    padding: 40px;
 }
