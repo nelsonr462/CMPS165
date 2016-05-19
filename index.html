@@ -3,6 +3,9 @@
     <head>
         <title>Whats in your coffee?</title>
         
+        <!-- Load CSS-->
+        <link rel="stylesheet" type="text/css" href="coffee.css">
+        
         <!-- Load jQuery cdn -->
         <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
         
@@ -16,100 +19,112 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     </head>
     <body>
-        <div name="coffeeCup"></div>
+        <div class="container main">
+            <!-- Begin Modifiers Side -->
+            <div class="col-sm-6">
+                <!-- Arabica bean -->
+                <img src="static/img/beans/coffee-bean.svg"
+                     style="width:150px; height:180px; padding:40px;"
+                     class="bean"
+                     data="Arabica">
+                <!-- Robusta bean -->
+                <img src="static/img/beans/coffee-bean.svg"
+                     style="width:150px; height:180px; padding:40px;"
+                     class="bean"
+                     data="Robusta">
+                
+                <br>
+                
+                <!-- Light roast -->
+                <img src="static/img/roasts/light.png"
+                     style="width:200px; height:100px;"
+                     class="roast"
+                     data="Light">
+                <!-- Medium roast -->
+                <img src="static/img/roasts/medium.png"
+                     style="width:200px; height:100px;"
+                     class="roast"
+                     data="Medium">
+                <!-- Dark roast -->
+                <img src="static/img/roasts/dark.png"
+                     style="width:200px; height:100px;"
+                     class="roast"
+                     data="Dark">
+                
+                <br>
         
-         <!-- Arabica bean -->
-        <img src="static/img/beans/coffee-bean.svg"
-             style="width:150px; height:180px; padding:40px;"
-             class="bean"
-             data="Arabica">
-        <!-- Robusta bean -->
-        <img src="static/img/beans/coffee-bean.svg"
-             style="width:150px; height:180px; padding:40px;"
-             class="bean"
-             data="Robusta">
-        
-        <br>
-        
-        <!-- Light roast -->
-        <img src="static/img/roasts/light.png"
-             style="width:200px; height:100px;"
-             class="roast"
-             data="Light">
-        <!-- Medium roast -->
-        <img src="static/img/roasts/medium.png"
-             style="width:200px; height:100px;"
-             class="roast"
-             data="Medium">
-        <!-- Dark roast -->
-        <img src="static/img/roasts/dark.png"
-             style="width:200px; height:100px;"
-             class="roast"
-             data="Dark">
-        
-        <br>
-
-        <!-- Chemex method -->
-        <img src="static/img/methods/chemex.svg"
-             style="width:150px; height:180px; padding:35px;"
-             class="method"
-             data="Chemex">
-        <!-- Siphon method -->
-        <img src="static/img/methods/coffee-pot-empty.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="method"
-             data="Siphon">
-        <!-- Espresso method -->
-        <img src="static/img/methods/espresso-machine.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="method"
-             data="Espresso">
-        <!-- Cold Brew method -->
-        <img src="static/img/methods/coffee-maker.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="method"
-             data="Cold Brew">
-        <!-- Turkish method -->
-        <img src="static/img/methods/cezve.svg"
-             style="width:150px; height:180px; padding:25px;"
-             class="method"
-             data="Turkish">
-        
-        <br>
-        
-        <!-- Cow milk -->
-        <img src="static/img/milks/milk.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="mod"
-             data="Cow Milk">
-        <!-- Almond milk -->
-        <img src="static/img/milks/coffee-milk-bottles.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="mod"
-             data="Almond Milk">
-        <!-- Soy milk -->
-        <img src="static/img/milks/milk.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="mod"
-             data="Soy Milk">
-        
-        <br>
-        
-        <!-- Sugar -->
-        <img src="static/img/sweeteners/sachet-sugar.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="sweetener"
-             data="Sugar">
-        <!-- Honey -->
-        <img src="static/img/sweeteners/sugar-pot.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="sweetener"
-             data="Honey">
-        <!-- Flavor Syrup -->
-        <img src="static/img/sweeteners/sugar-pot.svg"
-             style="width:150px; height:180px; padding:30px;"
-             class="sweetener"
-             data="Syrup">
+                <!-- Chemex method -->
+                <img src="static/img/methods/chemex.svg"
+                     style="width:150px; height:180px; padding:35px;"
+                     class="method"
+                     data="Chemex">
+                <!-- Siphon method -->
+                <img src="static/img/methods/coffee-pot-empty.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="method"
+                     data="Siphon">
+                <!-- Espresso method -->
+                <img src="static/img/methods/espresso-machine.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="method"
+                     data="Espresso">
+                <!-- Cold Brew method -->
+                <img src="static/img/methods/coffee-maker.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="method"
+                     data="Cold Brew">
+                <!-- Turkish method -->
+                <img src="static/img/methods/cezve.svg"
+                     style="width:150px; height:180px; padding:25px;"
+                     class="method"
+                     data="Turkish">
+                
+                <br>
+                
+                <!-- Cow milk -->
+                <img src="static/img/milks/milk.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="mod"
+                     data="Cow Milk">
+                <!-- Almond milk -->
+                <img src="static/img/milks/coffee-milk-bottles.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="mod"
+                     data="Almond Milk">
+                <!-- Soy milk -->
+                <img src="static/img/milks/milk.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="mod"
+                     data="Soy Milk">
+                
+                <br>
+                
+                <!-- Sugar -->
+                <img src="static/img/sweeteners/sachet-sugar.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="sweetener"
+                     data="Sugar">
+                <!-- Honey -->
+                <img src="static/img/sweeteners/sugar-pot.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="sweetener"
+                     data="Honey">
+                <!-- Flavor Syrup -->
+                <img src="static/img/sweeteners/sugar-pot.svg"
+                     style="width:150px; height:180px; padding:30px;"
+                     class="sweetener"
+                     data="Syrup">
+            </div>
+            <!-- End Modifiers Side-->
+            
+            <!-- Begin Results Side-->
+            <div class="col-sm-6">
+                
+            </div>
+            <!-- End Results Side-->
+            
+            
+        </div>
         
         <!-- Load json data -->
         <script src="coffeedata.json"></script>

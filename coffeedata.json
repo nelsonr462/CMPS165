@@ -14,7 +14,6 @@ var data =
       "caffeine_scalar": 1.0,
       "flavor": -.025,
       "caffeine": 1.0,
-      "flavor": -.025,
       "price": 0.30503
     },
     
@@ -23,7 +22,6 @@ var data =
       "caffeine_scalar": 1.62,
       "flavor": -.05,
       "caffeine": 1.62,
-      "flavor": -.05,
       "price": 0.17974
     }
     
@@ -53,7 +51,7 @@ var data =
       "size": 1.5,
       "calories": 0.6667,
       "flavor": -0.3,
-      "gramsPerCup": 24
+      "gramsPerCup": 8
     },
     {
       "name": "Cold Brew",
@@ -61,7 +59,7 @@ var data =
       "size": 8,
       "calories": 0.125,
       "flavor": 0.3,
-      "gramsPerCup": 24
+      "gramsPerCup": 53
     },
     {
       "name": "Turkish",
@@ -69,7 +67,7 @@ var data =
       "size": 2,
       "calories": 9.0,
       "flavor": -0.4,
-      "gramsPerCup": 24
+      "gramsPerCup": 6
     }
     
   ],
