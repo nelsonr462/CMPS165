@@ -100,7 +100,7 @@ var data =
   "mods": [
     {
       "type": "milk",
-      "name": "Milk",
+      "name": "Cow Milk",
       "calories": 17.5,
       "flavor": 0.1,
       "price": 0.04
@@ -135,7 +135,7 @@ var data =
     },
     {
       "type": "sweetener",
-      "name": "Syrup",
+      "name": "Maple Syrup",
       "calories": 74,
       "flavor": 0.3,
       "price": 0.19
