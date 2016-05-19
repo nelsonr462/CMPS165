@@ -6,7 +6,8 @@ var coffeeSet = {
     bean: "",
     roast: "",
     method: "",
-    mods: [,]
+    milk: "",
+    sweetener: ""
 }
 
 var coffee = coffeeSet;
@@ -26,3 +27,12 @@ function setMethod(data) {
     alert(coffee.method);
 }
 
+function setMilk(data) {
+    coffee.milk = data.toString();
+    alert(coffee.milk);
+}
+
+function setSweetener(data) {
+    coffee.sweetener = data.toString();
+    alert(coffee.sweetener);
+}
