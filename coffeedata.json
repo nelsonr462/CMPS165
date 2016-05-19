@@ -6,6 +6,7 @@ Flavor: Negative => makes the coffe more bitter, Positive => while a postive fla
 Size => ounces of coffee per cup
 Calories => calories per ounce
 */
+var data = 
 {  
   "beans": [
     {
