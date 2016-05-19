@@ -6,8 +6,8 @@ Flavor: Negative => makes the coffe more bitter, Positive => while a postive fla
 Size => ounces of coffee per cup
 Calories => calories per ounce
 */
-var data = 
-{  
+var data =
+{
   "beans": [
     {
       "name": "Arabica",
@@ -35,8 +35,7 @@ var data =
       "caffeine": 145,
       "size": 8,
       "calories": 0.25,
-      "price": "",
-      "flavor": "...",
+      "flavor": 0.25,
       "gramsPerCup": 24
       
     },
@@ -45,8 +44,7 @@ var data =
       "caffeine": 130,
       "size": 8,
       "calories": 0.25,
-      "price": "",
-      "flavor": "...",
+      "flavor": 0.25,
       "gramsPerCup": 24
     },
     {
@@ -54,8 +52,7 @@ var data =
       "caffeine": 77,
       "size": 1.5,
       "calories": 0.6667,
-      "price": "",
-      "flavor": "...",
+      "flavor": -0.3,
       "gramsPerCup": 24
     },
     {
@@ -63,8 +60,7 @@ var data =
       "caffeine": 95,
       "size": 8,
       "calories": 0.125,
-      "price": "",
-      "flavor": "...",
+      "flavor": 0.3,
       "gramsPerCup": 24
     },
     {
@@ -72,8 +68,7 @@ var data =
       "caffeine": 50,
       "size": 2,
       "calories": 9.0,
-      "price": "",
-      "flavor": "...",
+      "flavor": -0.4,
       "gramsPerCup": 24
     }
     
@@ -135,7 +130,7 @@ var data =
     },
     {
       "type": "sweetener",
-      "name": "Maple Syrup",
+      "name": "Syrup",
       "calories": 74,
       "flavor": 0.3,
       "price": 0.19

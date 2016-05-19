@@ -13,86 +13,103 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
         
         <!-- Load Bootstrap css -->
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">    
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     </head>
     <body>
+        <div name="coffeeCup"></div>
         
         <!-- Arabica bean -->
-        <img src="static/img/beans/arabica-bean.png" 
+        <img src="static/img/beans/arabica-bean.png"
              style="width:200px; height:180px;"
-             onclick="setBean('Arabica')">
+             class="bean"
+             data="Arabica">
         <!-- Robusta bean -->
-        <img src="static/img/beans/robusta-bean.png" 
+        <img src="static/img/beans/robusta-bean.png"
              style="width:200px; height:180px;"
-             onclick="setBean('Robusta')">
+             class="bean"
+             data="Robusta">
         
         <br>
         
         <!-- Light roast -->
-        <img src="static/img/roasts/light.png" 
+        <img src="static/img/roasts/light.png"
              style="width:200px; height:100px;"
-             onclick="setRoast('Light')">        
+             class="roast"
+             data="Light">
         <!-- Medium roast -->
-        <img src="static/img/roasts/medium.png" 
+        <img src="static/img/roasts/medium.png"
              style="width:200px; height:100px;"
-             onclick="setRoast('Medium')">        
+             class="roast"
+             data="Medium">
         <!-- Dark roast -->
-        <img src="static/img/roasts/dark.png" 
+        <img src="static/img/roasts/dark.png"
              style="width:200px; height:100px;"
-             onclick="setRoast('Dark')">
+             class="roast"
+             data="Dark">
         
         <br>
 
         <!-- Chemex method -->
-        <img src="static/img/methods/chemex.jpeg" 
+        <img src="static/img/methods/chemex.jpeg"
              style="width:200px; height:180px;"
-             onclick="setMethod('Chemex')">
+             class="method"
+             data="Chemex">
         <!-- Siphon method -->
-        <img src="static/img/methods/siphon.jpeg" 
+        <img src="static/img/methods/siphon.jpeg"
              style="width:200px; height:180px;"
-             onclick="setMethod('Siphon')">
+             class="method"
+             data="Siphon">
         <!-- Espresso method -->
-        <img src="static/img/methods/espresso.jpg" 
+        <img src="static/img/methods/espresso.jpg"
              style="width:200px; height:180px;"
-             onclick="setMethod('Espresso')">
+             class="method"
+             data="Espresso">
         <!-- Iced method -->
-        <img src="static/img/methods/ice_coffee.jpg" 
+        <img src="static/img/methods/ice_coffee.jpg"
              style="width:200px; height:180px;"
-             onclick="setMethod('Iced')">
+             class="method"
+             data="Iced">
         <!-- Turkish method -->
-        <img src="static/img/methods/turkish.jpeg" 
+        <img src="static/img/methods/turkish.jpeg"
              style="width:200px; height:180px;"
-             onclick="setMethod('Turkish')">
+             class="method"
+             data="Turkish">
         
         <br>
         
         <!-- Cow milk -->
-        <img src="static/img/milks/cow_milk.jpg" 
+        <img src="static/img/milks/cow_milk.jpg"
              style="width:200px; height:180px;"
-             onclick="setMilk('Cow Milk')">
+             class="mod"
+             data="Cow Milk">
         <!-- Almond milk -->
-        <img src="static/img/milks/almond_milk.jpg" 
+        <img src="static/img/milks/almond_milk.jpg"
              style="width:200px; height:180px;"
-             onclick="setMilk('Almond Milk')">
+             class="mod"
+             data="Almond Milk">
         <!-- Soy milk -->
-        <img src="static/img/milks/soy_milk.jpg" 
+        <img src="static/img/milks/soy_milk.jpg"
              style="width:200px; height:180px;"
-             onclick="setMilk('Soy Milk')">
+             class="mod"
+             data="Soy Milk">
         
         <br>
         
         <!-- Sugar -->
-        <img src="static/img/sweeteners/sugar.jpg" 
+        <img src="static/img/sweeteners/sugar.jpg"
              style="width:200px; height:180px;"
-             onclick="setSweetener('Sugar')">
+             class="sweetener"
+             data="Sugar">
         <!-- Honey -->
-        <img src="static/img/sweeteners/honey.jpg" 
+        <img src="static/img/sweeteners/honey.jpg"
              style="width:200px; height:180px;"
-             onclick="setSweetener('Honey')">
-        <!-- Maple Syrup -->
-        <img src="static/img/sweeteners/syrup.jpg" 
+             class="sweetener"
+             data="Honey">
+        <!-- Flavor Syrup -->
+        <img src="static/img/sweeteners/syrup.jpg"
              style="width:200px; height:180px;"
-             onclick="setSweetener('Maple Syrup')">
+             class="sweetener"
+             data="Syrup">
         
         <!-- Load json data -->
         <script src="coffeedata.json"></script>
@@ -100,5 +117,5 @@
         <!-- Load main js file -->
         <script src="coffee.js"></script>
         
-    </body>  
+    </body>
 </html>

@@ -12,27 +12,31 @@ var coffeeSet = {
 
 var coffee = coffeeSet;
 
-function setBean(data) {
-    coffee.bean = data.toString();
-    alert(coffee.bean);
-}
+$(".bean").click(function(){
+    coffee.bean = $(this).attr('data')
+    console.log(coffee.bean)
+})
 
-function setRoast(data) {
-    coffee.roast = data.toString();
-    alert(coffee.roast);
-}
+$(".method").click(function(){
+    coffee.method = $(this).attr('data')
+    console.log(coffee.method)
+})
 
-function setMethod(data) {
-    coffee.method = data.toString();
-    alert(coffee.method);
-}
+$(".roast").click(function(){
+    coffee.roast = $(this).attr('data')
+    console.log(coffee.roast)
+})
 
-function setMilk(data) {
-    coffee.milk = data.toString();
-    alert(coffee.milk);
-}
+$(".mod").click(function(){
+    coffee.milk = $(this).attr('data')
+    console.log(coffee.milk)
+})
 
-function setSweetener(data) {
-    coffee.sweetener = data.toString();
-    alert(coffee.sweetener);
-}
+$(".sweetener").click(function(){
+    coffee.sweetener = $(this).attr('data')
+    console.log(coffee.sweetener)
+})
+
+// $("*").click(function(){
+//     console.log(coffee)
+// })
