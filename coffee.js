@@ -9,11 +9,11 @@ console.log(data);
 var coffeeSet = {
     
     // Attributes the user must select
-    bean: "",
-    method: "",
-    roast: "",
-    milk: "",
-    sweetener: ""
+    bean: "Arabica",
+    method: "Siphon",
+    roast: "Dark",
+    milk: "Cow Milk",
+    sweetener: "Honey"
 }
 
 var coffee = coffeeSet;
@@ -56,12 +56,11 @@ function calc(coffeeVal) {
     price = 0;
     
     
-    for (var key in data && coffee) {
+    for (var key in data) {
         
         // skip loop if the property is from prototype
         if (!data.hasOwnProperty(key)) continue;
         
-
         // Set new object to data property
         var obj = data[key];
         
@@ -70,9 +69,22 @@ function calc(coffeeVal) {
             // skip loop if the property is from prototype
             if(!obj.hasOwnProperty(prop)) continue;
 
-            // Loop though keys within each data key
-            if (Object.is(coffee[key], obj[prop]["name"]))
-                console.log("tets");
+            
+            if (obj[prop]["name"] == coffee.bean)
+                console.log(obj[prop]["name"]);
+            
+            if (obj[prop]["name"] == coffee.roast)
+                console.log(obj[prop]["name"]);
+            
+            if (obj[prop]["name"] == coffee.method)
+                console.log(obj[prop]["name"]);
+            
+            if (obj[prop]["name"] == coffee.milk)
+                console.log(obj[prop]["name"]);
+            
+            if (obj[prop]["name"] == coffee.sweetener)
+                console.log(obj[prop]["name"]);
+
         }
     }
 }
