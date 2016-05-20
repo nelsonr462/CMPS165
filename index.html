@@ -17,23 +17,38 @@
         <!-- Load Bootstrap cdn -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
         
+        <!-- Navbar -->
+        <script src="jquery.bootstrap-autohidingnavbar.js" charset="utf-8"></script>
+        
         <!-- Load Bootstrap css -->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+        
     </head>
     <body>
+        <nav class="navbar navbar-default navbar-fixed-top mainTitle">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <p class="titleText">WHAT'S IN YOUR CUP?</p>
+              <p class="titleDetail">See how changing the way your cup is made affects everything from how much of a kick you'll get, to how much it will cost!</p>
+            </div>
+          </div>
+        </nav>
         <div class="container main">
-            <!-- Begin Modifiers Side -->
-            <div class="col-sm-6">
+            <div class="col-sm-6 modSide">
                 
                 <!--Bean Row-->
                 <div class="row">
+                    <div class="col-sm-12">
+                        <p class="titleLabel">PICK A BEAN AND ROAST</p>
+                    </div>
                     <div class="col-sm-2"></div>
                     <!-- Arabica bean -->
                     <div class="col-sm-4">
                         <img src="static/img/beans/coffee-bean.svg"
                              class="bean"
                              data="Arabica">
-                        <p class="beanLabel">ARABICA</p>
+                        <p class="itemLabel">ARABICA</p>
                     </div>
                     
                     <!-- Robusta bean -->
@@ -41,12 +56,12 @@
                         <img src="static/img/beans/coffee-bean.svg"
                              class="bean"
                              data="Robusta">
-                             <p class="beanLabel">ROBUSTA</p>
+                             <p class="itemLabel">ROBUSTA</p>
                     </div>
                 </div>
                 
                 <!-- Roast Row-->
-                <div class="mods row">
+                <div class="mods row content">
                     
                     <!-- Light roast -->
                     <div class="col-sm-4">
@@ -67,13 +82,16 @@
                 </div>
                 
                 <!-- Brewing Methods Row-->
-                <div class="row">
+                <div class="row content">
+                    <div class="col-sm-12">
+                        <p class=titleLabel>CHOOSE YOUR BREW</p>
+                    </div>
                     <!-- Chemex method -->
                     <div class="col-sm-4">
                         <img src="static/img/methods/chemex.svg"
                              class="image method"
                              data="Chemex">
-                         <p class="beanLabel">CHEMEX</p>
+                         <p class="itemLabel">CHEMEX</p>
                     </div>
                     
                     <!-- Siphon method -->
@@ -81,7 +99,7 @@
                         <img src="static/img/methods/coffee-pot-empty.svg"
                              class="image method"
                              data="Siphon">
-                         <p class="beanLabel">SIPHON</p>
+                         <p class="itemLabel">SIPHON</p>
                     </div>
                     
                     <!-- Cold Brew method -->
@@ -89,7 +107,7 @@
                         <img src="static/img/methods/coffee-maker.svg"
                              class="image method"
                              data="Cold Brew">
-                         <p class="beanLabel">COLD BREW</p>
+                         <p class="itemLabel">COLD BREW</p>
                     </div>
                     
                     <div class="col-sm-2"></div>
@@ -99,7 +117,7 @@
                         <img src="static/img/methods/espresso-machine.svg"
                              class="image method"
                              data="Espresso">
-                         <p class="beanLabel">ESPRESSO</p>
+                         <p class="itemLabel">ESPRESSO</p>
                         
                     </div>
                     
@@ -110,7 +128,7 @@
                         <img src="static/img/methods/cezve.svg"
                              class="turkish image method"
                              data="Turkish">
-                         <p class="beanLabel">TURKISH</p>
+                         <p class="itemLabel">TURKISH</p>
                         
                     </div>
                     
@@ -118,40 +136,83 @@
                 </div>
                 
 
+                <div class="row content">
+                    <p class="titleLabel">SOME MILK AND SUGAR WITH THAT?</p>
+                    <!-- Cow milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/milk.svg"
+                             class="milk"
+                             data="Cow Milk">
+                        <p class="itemLabel">MILK</p>
+                    </div>
+                    
+                    <!-- Almond milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/coffee-milk-bottles.svg"
+                             class="milk"
+                             data="Almond Milk">
+                        <p class="itemLabel">ALMOND MILK</p>
+                    </div>
+                    
+                    <!-- Soy milk -->
+                    <div class="col-sm-4">
+                        <img src="static/img/milks/milk.svg"
+                             class="milk"
+                             data="Soy Milk">
+                         <p class="itemLabel">SOY MILK</p>
+                    </div>
                 
+                    <!-- Sugar -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/sachet-sugar.svg"
+                             class="sweetener"
+                             data="Sugar">
+                        <p class="itemLabel">SUGAR</p>
+                    </div>
+                    
+                    <!-- Honey -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/sugar-pot.svg"
+                             class="sweetener"
+                             data="Honey">
+                         <p class="itemLabel">HONEY</p>
+                    </div>
+                    
+                    <!-- Flavor Syrup -->
+                    <div class="col-sm-4">
+                        <img src="static/img/sweeteners/sugar-pot.svg"
+                             class="sweetener"
+                             data="Syrup">
+                        <p class="itemLabel">SYRUP</p>
+                    </div>
                 
-                <!-- Cow milk -->
-                <img src="static/img/milks/milk.svg"
-                     class="milk"
-                     data="Cow Milk">
-                <!-- Almond milk -->
-                <img src="static/img/milks/coffee-milk-bottles.svg"
-                     class="milk"
-                     data="Almond Milk">
-                <!-- Soy milk -->
-                <img src="static/img/milks/milk.svg"
-                     class="milk"
-                     data="Soy Milk">
+                    
+                </div>
                 
-                <br>
-                
-                <!-- Sugar -->
-                <img src="static/img/sweeteners/sachet-sugar.svg"
-                     class="sweetener"
-                     data="Sugar">
-                <!-- Honey -->
-                <img src="static/img/sweeteners/sugar-pot.svg"
-                     class="sweetener"
-                     data="Honey">
-                <!-- Flavor Syrup -->
-                <img src="static/img/sweeteners/sugar-pot.svg"
-                     class="sweetener"
-                     data="Syrup">
             </div>
             <!-- End Modifiers Side-->
             
             <!-- Begin Results Side-->
-            <div class="col-sm-6">
+            <div class="col-sm-6 resultSide">
+                
+                <!--Graphs-->
+                <div class="row"></div>
+                
+                <!-- Coffee Cup-->
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <img src="static/img/glass-coffee-mug.png"
+                            class="mainCup">
+                    </div>
+                    
+                    <div class="col-sm-4"></div>
+                </div>
+                
+                <!-- Name and extra info-->
+                <div class="row"></div>
                 
             </div>
             <!-- End Results Side-->

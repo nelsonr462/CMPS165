@@ -1,36 +1,62 @@
+/* Navbar stuff*/
+
+.mainTitle {
+    background-color: #FFEBAF !important;
+    border: 0 !important;
+    font-family: Montserrat;
+    padding: 10px 0px 10px 0px;
+}
+
+.mainTitle .titleText {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mainTitle .titleDetail {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+
+/* Main container */
+    
 .main {
-    margin-left: 1% !important;
-    margin-right: 1% !important;
-    width: 98% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 10vh !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: 90vh;
     text-align: center;
     font-family: Montserrat;
     font-weight: bold;
     font-size: 16px;
 }
 
-.main .bean {
-    width:150px;
-    height:180px;
-    padding: 20px 40px 0px 40px;
-}
+    .main .bean {
+        width:150px;
+        height:180px;
+        padding: 20px 40px 0px 40px;
+    }
+    
+    .main .roast {
+        width: 70%;
+    }
+    
+    .main .milk {
+        width:150px;
+        height:180px;
+        padding: 40px;
+    }
+    
+    .main .sweetener {
+        width:150px;
+        height:180px;
+        padding: 40px;
+    }
 
-.main .roast {
-    width: 70%;
-}
-
-.main .milk {
-    width:150px;
-    height:180px;
-    padding: 40px;
-}
-
-.main .sweetener {
-    width:150px;
-    height:180px;
-    padding: 40px;
-}
-
-.row {
+/* Rows and content*/
+.content {
     padding: 50px 10px 50px 10px;
 }
 
@@ -38,8 +64,13 @@
     padding-bottom:10px;
 }
 
-.beanLabel {
+.itemLabel {
     margin: -15px auto auto auto;
+}
+
+.titleLabel {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .turkish {
@@ -50,4 +81,24 @@
     width:150px;
     height:180px;
     padding: 40px;
+}
+
+
+.mainCup {
+    width: 100%;
+    height: 100%;
+}
+
+.resultSide {
+    background-color: #B3F7F6;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    padding-top: 15vh;
+}
+.modSide {
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+    padding-top: 15vh;
 }
