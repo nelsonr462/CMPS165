@@ -73,14 +73,16 @@ $(document).ready(function(){
   }
   
   // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-  chart.on('created', windowTimeout())
+  // caffeine.on('created', windowTimeout())
+  // calories.on('created', windowTimeout())
+  // price.on('created', windowTimeout())
   
-  function windowTimeout() {
-    if(window.__anim21278907124) {
-      clearTimeout(window.__anim21278907124);
-      window.__anim21278907124 = null;
-    }
-    window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
-  }
+  // function windowTimeout(chart) {
+  //   if(window.__anim21278907124) {
+  //     clearTimeout(window.__anim21278907124);
+  //     window.__anim21278907124 = null;
+  //   }
+  //   window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+  // }
 
 })
