@@ -3,6 +3,10 @@
     <head>
         <title>Whats in your coffee?</title>
         
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="static/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16" />
+        
         <!-- Load CSS-->
         <link rel="stylesheet" type="text/css" href="coffee.css">
         <!-- Load Font -->
@@ -17,11 +21,20 @@
         <!-- Load Bootstrap cdn -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
         
-        <!-- Navbar -->
-        <script src="jquery.bootstrap-autohidingnavbar.js" charset="utf-8"></script>
-        
         <!-- Load Bootstrap css -->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+        <!-- Custom Scrollbar CSS-->
+        <link rel="stylesheet" href="libraries/jquery.mCustomScrollbar.css" />
+        
+        <!-- Custom Scrollbar JS-->
+        <script src="libraries/jquery.mCustomScrollbar.js"></script>
+        
+        <!-- Chartist CSS-->
+        <link rel="stylesheet" href="libraries/chartist.css" />
+        
+        <!-- Chartist JS-->
+        <script src="libraries/chartist.js"></script>
         
         
     </head>
@@ -35,7 +48,7 @@
           </div>
         </nav>
         <div class="container main">
-            <div class="col-sm-6 modSide">
+            <div class="col-sm-6 modSide mCustomScrollbar" data-mcs-theme="minimal">
                 
                 <!--Bean Row-->
                 <div class="row">
@@ -135,7 +148,7 @@
                     <div class="col-sm-2"></div>
                 </div>
                 
-
+                <!-- Modifiers Section-->
                 <div class="row content">
                     <p class="titleLabel">SOME MILK AND SUGAR WITH THAT?</p>
                     <!-- Cow milk -->
@@ -196,7 +209,31 @@
             <div class="col-sm-6 resultSide">
                 
                 <!--Graphs-->
-                <div class="row"></div>
+                <div class="row graphs">
+                    <div class="resultTitle">
+                        <p>YOUR COFFEE</p>
+                    </div>
+                
+                    <div class="col-sm-4">
+                        <div class="caffeine"></div>
+                        <p class="graphTitle">CAFFEINE</p>
+                        <p class="graphDetail">(mg/serving)</p>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="calories"></div>
+                        <p class="graphTitle">CALORIES</p>
+                        <p class="graphDetail">(calories/serving)</p>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="price"></div>
+                        <p class="graphTitle">PRICE</p>
+                        <p class="graphDetail">($USD)</p>
+                    </div>
+                </div>
+                
+
                 
                 <!-- Coffee Cup-->
                 <div class="row">
@@ -225,6 +262,9 @@
         
         <!-- Load main js file -->
         <script src="coffee.js"></script>
+        
+        <!-- Load Chart visualization file-->
+        <script src="charts.js"></script>
         
     </body>
 </html>

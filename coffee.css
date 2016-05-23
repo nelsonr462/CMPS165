@@ -82,8 +82,9 @@
 }
 
 .titleLabel {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
+    padding-top: 20px !important;
 }
 
 .turkish {
@@ -134,3 +135,25 @@
     width: 100%;
     padding-top: 15vh;
 }
+
+.resultTitle {
+    padding-top: 20px !important;
+    padding-bottom: 30px !important;
+    font-size: 28px;
+}
+
+/* GRAPHS */
+
+.graphs {
+    padding-bottom: 80px!important
+}
+
+.graphDetail {
+    font-size: 12px;
+}
+
+.graphTitle {
+    margin-top: -70px !important;
+    margin-bottom: 0 !important;
+}
+
