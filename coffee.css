@@ -38,6 +38,12 @@
         height:180px;
         padding: 20px 40px 0px 40px;
     }
+
+    .arabica{
+        width:150px;
+        height:180px;
+        padding: 55px 40px 45px 40px;
+    }
     
     .main .roast {
         width: 70%;
@@ -87,6 +93,12 @@
     width: 143px;
     height: 180px;
     padding: 40px;
+}
+
+.chemex{
+    width: 141px;
+    height: 180px;
+    padding: 55px 40px 45px 40px;
 }
 
 .image {
