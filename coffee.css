@@ -42,7 +42,7 @@
     .arabica{
         width:150px;
         height:180px;
-        padding: 55px 40px 45px 40px;
+        padding: 55px 30px 45px 40px;
     }
     
     .main .roast {
@@ -53,6 +53,12 @@
         width:150px;
         height:180px;
         padding: 40px;
+    }
+    
+    .almond{
+        width:150px;
+        height:180px;
+        padding: 40px 45px 40px 45px;
     }
     
     .main .sweetener {
