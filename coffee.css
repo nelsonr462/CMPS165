@@ -1,9 +1,10 @@
 /* Navbar stuff*/
 
 .mainTitle {
-    background-color: #FFEBAF !important;
+    background-color: #083C5A !important;
     border: 0 !important;
     font-family: Montserrat;
+    color: #E4F4FD;
     padding: 10px 0px 10px 0px;
 }
 
@@ -120,13 +121,14 @@
 }
 
 .resultSide {
-    background-color: #B3F7F6;
+    background-color: #4CB648;
     position: absolute;
     height: 100vh;
     width: 100%;
     padding-top: 15vh;
 }
 .modSide {
+    background-color: #FCC72C;
     height: 100vh;
     overflow-y: scroll;
     width: 100%;
