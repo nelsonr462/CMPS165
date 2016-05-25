@@ -1,11 +1,11 @@
 /* Navbar stuff*/
 
 .mainTitle {
-    background-color: #083C5A !important;
+    background-color: #764F1F !important;
     border: 0 !important;
     font-family: Montserrat;
-    color: #E4F4FD;
-    padding: 10px 0px 10px 0px;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
 }
 
 .mainTitle .titleText {
@@ -130,14 +130,14 @@
 }
 
 .resultSide {
-    background-color: #4CB648;
+    background-color: #94CDCB;
     position: absolute;
     height: 100vh;
     width: 100%;
     padding-top: 15vh;
 }
 .modSide {
-    background-color: #FCC72C;
+    background-color: #E4F0EF;
     height: 100vh;
     overflow-y: scroll;
     width: 100%;
