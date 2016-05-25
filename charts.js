@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var caffeine = new Chartist.Pie('.caffeine', {
-    series: [20, 10, 30, 40]
+//    series: [20, 10, 30, 40]
+    series: [t_caffeine]
   }, {
     donut: true,
     donutWidth: 30,
@@ -10,7 +11,8 @@ $(document).ready(function(){
   });
   
   var calories = new Chartist.Pie('.calories', {
-    series: [20, 10, 30, 40]
+//    series: [20, 10, 30, 40]
+  series: [t_calories]
   }, {
     donut: true,
     donutWidth: 30,
@@ -20,7 +22,8 @@ $(document).ready(function(){
   });
   
   var price = new Chartist.Pie('.price', {
-    series: [20, 10, 30, 40]
+//    series: [20, 10, 30, 40]
+  series: [t_price]
   }, {
     donut: true,
     donutWidth: 30,
