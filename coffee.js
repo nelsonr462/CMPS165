@@ -20,43 +20,73 @@ var coffee = coffeeSet
 
 // Set bean
 $(".bean").click(function(){
+    
+    // Set coffee attribute
     coffee.bean = $(this).attr('data')
     console.log(coffee.bean)
+   
+    // Calculate new coffee results based on changed attribute
     calc(coffee)
+    
+    // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
 // Set method
 $(".method").click(function(){
+    
+    // Set coffee attribute
     coffee.method = $(this).attr('data')
     console.log(coffee.method)
+    
+    // Calculate new coffee results based on changed attribute
     calc(coffee)
+    
+    // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
 // Set roast
 $(".roast").click(function(){
+    
+    // Set coffee attribute
     coffee.roast = $(this).attr('data')
     console.log(coffee.roast)
+    
+    // Calculate new coffee results based on changed attribute
     calc(coffee)
+    
+    // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
 
 })
 
 // Set milk
 $(".milk").click(function(){
+    
+    // Set coffee attribute
     coffee.milk = $(this).attr('data')
     console.log(coffee.milk)
+    
+    // Calculate new coffee results based on changed attribute
     calc(coffee)
+    
+    // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
 
 })
 
 // Set sweetener
 $(".sweetener").click(function(){
+    
+    // Set coffee attribute    
     coffee.sweetener = $(this).attr('data')
     console.log(coffee.sweetener)
+    
+    // Calculate new coffee results based on changed attribute
     calc(coffee)
+    
+    // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
 
 })
@@ -202,12 +232,13 @@ function calc(coffeeVal) {
     }
     else {
         
-        // Calculate calories for Turkish/Espresso methods
+        // Calculate calories for all other methods
         t_calories = 
             (calorie_ounce_method * size) +
             (calorie_ounce_milk * 2) +
             (calorie_ounce_sweetener * 2)
         
+        // Calculate price for all other methods
         t_price =
             (bean_price * gramsPerCup) +
             (milk_price * 2) +
@@ -243,4 +274,4 @@ function calc(coffeeVal) {
 
 // Display inital animation
 calc(coffee)
-setAnimation()
+setAnimation(t_caffeine, t_calories, t_price)
