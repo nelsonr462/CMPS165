@@ -4,6 +4,9 @@ var t_calories
 var t_flavor
 var t_price
 
+// List of saved coffee
+var coffeeList = []
+
 console.log(data);
 
 var coffeeSet = {
@@ -58,7 +61,6 @@ $(".roast").click(function(){
     
     // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
-
 })
 
 // Set milk
@@ -73,7 +75,6 @@ $(".milk").click(function(){
     
     // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
-
 })
 
 // Set sweetener
@@ -88,9 +89,36 @@ $(".sweetener").click(function(){
     
     // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
-
 })
 
+// Save current cup of coffee
+$(".save").click(function(){
+    
+    // adding to array of key/value pairs
+    dropdownAdd()
+})
+
+function dropdownAdd(name) {
+    
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    var text = document.createTextNode(name);
+    
+    a.appendChild(text);
+    li.appendChild(a);
+    
+    var list = document.getElementById("dropList");
+    
+    list.appendChild(li);
+}
+
+// add object to array
+function addObj(keyName, val) {
+    coffeeList.push({
+        key: keyName,
+        value: val
+    });
+}
 
 // Calculate calories, caffeine, flavor and price of a given cup of coffee
 function calc(coffeeVal) {

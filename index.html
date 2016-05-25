@@ -59,7 +59,7 @@
                     <!-- Arabica bean -->
                     <div class="col-sm-4">
                         <img src="static/img/beans/arabica.png"
-                             class="arabica bean"
+                             class="bean"
                              data="Arabica">
                         <p class="itemLabel">ARABICA</p>
                     </div>
@@ -251,11 +251,31 @@
                 <!-- Name and extra info-->
                 <div class="row"></div>
                 
-            </div>
-            <!-- End Results Side-->
+                <!-- Save coffee-->
+                <div class="row">
+                    
+                    <!-- Save coffee button -->
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-primary save" data="Light">Save this cup!</button>
+                    </div>
+                    
+                    <!-- Drop down of saved coffee objects -->
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Saved Coffee
+                            <span class="caret"></span></button>
+                            <ul id="dropList" class="dropdown-menu"></ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Name and extra info-->
+                <div class="row"></div>
+                
+            </div> <!-- End Results Side-->
             
             
-        </div>
+        </div> <!-- End container 
         
         <!-- Load json data -->
         <script src="coffeedata.json"></script>

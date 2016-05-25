@@ -34,39 +34,47 @@
     font-size: 16px;
 }
 
-    .main .bean {
-        width:150px;
-        height:180px;
-        padding: 20px 40px 0px 40px;
-    }
+.main .bean {
+    width:150px;
+    height:180px;
+    padding: 20px 40px 0px 40px;
+}
 
-    .arabica{
-        width:150px;
-        height:180px;
-        padding: 55px 30px 45px 40px;
-    }
-    
-    .main .roast {
-        width: 70%;
-    }
-    
-    .main .milk {
-        width:150px;
-        height:180px;
-        padding: 40px;
-    }
-    
-    .almond{
-        width:150px;
-        height:180px;
-        padding: 40px 45px 40px 45px;
-    }
-    
-    .main .sweetener {
-        width:150px;
-        height:180px;
-        padding: 40px;
-    }
+.arabica{
+    width:150px;
+    height:180px;
+    padding: 55px 30px 45px 40px;
+}
+
+.main .roast {
+    width: 70%;
+}
+
+.main .milk {
+    width:150px;
+    height:180px;
+    padding: 40px;
+}
+
+.almond{
+    width:150px;
+    height:180px;
+    padding: 40px 45px 40px 45px;
+}
+
+.main .sweetener {
+    width:150px;
+    height:180px;
+    padding: 40px;
+}
+
+.main .save {
+    margin: 20px;
+}
+
+.main .dropdown {
+    margin: 20px;
+}
 
 /* Rows and content*/
 .content {
