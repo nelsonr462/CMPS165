@@ -130,14 +130,14 @@
 }
 
 .resultSide {
-    background-color: #94CDCB;
+    background-color: #CCCCCC;
     position: absolute;
     height: 100vh;
     width: 100%;
     padding-top: 15vh;
 }
 .modSide {
-    background-color: #E4F0EF;
+    background-color: #CCCCCC;
     height: 100vh;
     overflow-y: scroll;
     width: 100%;

@@ -122,7 +122,7 @@ $(".save").click(function(){
 })
 
 
-$("#dropList > li").click(function(){
+$("#dropList li").click(function(){
     alert("test")
 })
 
