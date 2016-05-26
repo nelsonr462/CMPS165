@@ -115,6 +115,7 @@ $(".save").click(function(){
         dropdownAdd(txt)
         
         // Add current coffee object to array
+        console.log(coffee.method)
         addObj(txt, coffee)
         console.log(coffeeList)
         
@@ -123,9 +124,23 @@ $(".save").click(function(){
     } 
 })
 
+// Set the current coffee object to the new one requested
+// Then perform the calculations and animate accordingly
+$("#dropList").on("click", "li", function(){
+    
+    // Check if name already exists
+    for (var prop in coffeeList) {
+        console.log("CoffeeList: "+coffeeList[prop]["value"])
+        console.log("DropText: "+$(this).text())
+        if (coffeeList[prop]["key"] == $(this).text()) {
+            console.log("MATCH")
 
-$("#dropList li").click(function(){
-    alert("test")
+            
+            coffee = coffeeList[prop]["value"]
+            calc(coffee)
+            setAnimation(t_caffeine, t_calories, t_price)
+        }
+    }    
 })
 
 
@@ -144,11 +159,12 @@ function dropdownAdd(name) {
 }
 
 // add object to array
-function addObj(keyName, val) {
-    coffeeList.push({
+function addObj(keyName, val) { 
+    var obj = {
         key: keyName,
-        value: val
-    });
+        value: jQuery.extend({}, val)
+    }
+    coffeeList.push(obj)
 }
 
 // Calculate calories, caffeine, flavor and price of a given cup of coffee
@@ -307,28 +323,28 @@ function calc(coffeeVal) {
     // Flavor
     t_flavor = bean_flavor + method_flavor + roast_flavor + milk_flavor + sweetener_flavor
     
-    console.log("Size: "+size)
-    console.log("gramsPerCup: "+gramsPerCup)
-    console.log("Method: "+method)
-    console.log("caffeine_mg: "+caffeine_mg)
-    console.log("base_caffeine_scalar: "+base_caffeine_scalar)
-    console.log("caffeine_scalar: "+caffeine_scalar)
-    console.log("calorie_ounce_method: "+calorie_ounce_method)
-    console.log("calorie_ounce_milk: "+calorie_ounce_milk)
-    console.log("calorie_ounce_sweetener: "+calorie_ounce_sweetener)
-    console.log("bean_flavor: "+bean_flavor)
-    console.log("method_flavor: "+method_flavor)
-    console.log("roast_flavor: "+roast_flavor)
-    console.log("milk_flavor: "+milk_flavor)
-    console.log("sweetener_flavor: "+sweetener_flavor)
-    console.log("bean_price: "+bean_price)
-    console.log("milk_price: "+milk_price)
-    console.log("sweetener_price: "+sweetener_price)
-    console.log("BEGIN COFFEE STATS")
-    console.log("Caffeine: "+t_caffeine+" mg")
-    console.log("Calories: "+t_calories)
-    console.log("Flavor: "+ t_flavor)
-    console.log("Price: "+t_price)
+//    console.log("Size: "+size)
+//    console.log("gramsPerCup: "+gramsPerCup)
+//    console.log("Method: "+method)
+//    console.log("caffeine_mg: "+caffeine_mg)
+//    console.log("base_caffeine_scalar: "+base_caffeine_scalar)
+//    console.log("caffeine_scalar: "+caffeine_scalar)
+//    console.log("calorie_ounce_method: "+calorie_ounce_method)
+//    console.log("calorie_ounce_milk: "+calorie_ounce_milk)
+//    console.log("calorie_ounce_sweetener: "+calorie_ounce_sweetener)
+//    console.log("bean_flavor: "+bean_flavor)
+//    console.log("method_flavor: "+method_flavor)
+//    console.log("roast_flavor: "+roast_flavor)
+//    console.log("milk_flavor: "+milk_flavor)
+//    console.log("sweetener_flavor: "+sweetener_flavor)
+//    console.log("bean_price: "+bean_price)
+//    console.log("milk_price: "+milk_price)
+//    console.log("sweetener_price: "+sweetener_price)
+//    console.log("BEGIN COFFEE STATS")
+//    console.log("Caffeine: "+t_caffeine+" mg")
+//    console.log("Calories: "+t_calories)
+//    console.log("Flavor: "+ t_flavor)
+//    console.log("Price: "+t_price)
     
     
     // Update Graph Labels
