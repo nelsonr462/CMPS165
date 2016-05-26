@@ -91,25 +91,54 @@ $(".sweetener").click(function(){
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
-// Save current cup of coffee
+// Save current cup of coffee and add to coffeeList
 $(".save").click(function(){
+   
+    // Grab user text
+    var txt = $('#txt').val()
     
-    // adding to array of key/value pairs
-    dropdownAdd()
+    // Check if user named coffee
+    // Add to array of key/value pairs
+    if (txt) {
+        
+        // Check if name already exists
+        for (var prop in coffeeList) {
+            if (coffeeList[prop]["key"] == txt) {
+                alert("Name not unique")
+                return                
+            }
+        }
+        
+        // Add blend to list
+        dropdownAdd(txt)
+        
+        // Add current coffee object to array
+        addObj(txt, coffee)
+        console.log(coffeeList)
+        
+        // Reset val back to empty string
+        $('#txt').val("")
+    } 
 })
+
+
+$("#dropList > li").click(function(){
+    alert("test")
+})
+
 
 function dropdownAdd(name) {
     
-    var li = document.createElement("li");
-    var a = document.createElement("a");
-    var text = document.createTextNode(name);
+    var li = document.createElement("li")
+    var center = document.createElement("center")
+    var text = document.createTextNode(name)
     
-    a.appendChild(text);
-    li.appendChild(a);
+    center.appendChild(text)
+    li.appendChild(center)
     
-    var list = document.getElementById("dropList");
+    var list = document.getElementById("dropList")
     
-    list.appendChild(li);
+    list.appendChild(li)
 }
 
 // add object to array

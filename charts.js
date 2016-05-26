@@ -7,7 +7,8 @@ function setAnimation(t_caffeine, t_calories, t_price) {
 
     var caffeine = new Chartist.Pie('.caffeine', {
 //    series: [20, 10, 30, 40]
-    series: [t_caffeine / max_caffeine * 100]
+    series: [t_caffeine / max_caffeine * 100]   
+
   }, {
     donut: true,
     donutWidth: 30,
@@ -19,6 +20,8 @@ function setAnimation(t_caffeine, t_calories, t_price) {
   var calories = new Chartist.Pie('.calories', {
 //    series: [20, 10, 30, 40]
   series: [t_calories / max_calories * 100]
+
+
   }, {
     donut: true,
     donutWidth: 30,
