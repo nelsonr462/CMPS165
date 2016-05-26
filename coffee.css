@@ -74,6 +74,15 @@
 
 .main .dropdown {
     margin: 20px;
+    cursor: pointer !important;
+}
+
+.ul {
+    background-color: #FFFFFF !important;
+}
+
+.li:hover {
+    background-color: #FFAD33 !important;
 }
 
 /* Rows and content*/
