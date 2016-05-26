@@ -115,7 +115,6 @@ $(".save").click(function(){
         dropdownAdd(txt)
         
         // Add current coffee object to array
-        console.log(coffee.method)
         addObj(txt, coffee)
         console.log(coffeeList)
         
@@ -130,12 +129,10 @@ $("#dropList").on("click", "li", function(){
     
     // Check if name already exists
     for (var prop in coffeeList) {
-        console.log("CoffeeList: "+coffeeList[prop]["value"])
-        console.log("DropText: "+$(this).text())
         if (coffeeList[prop]["key"] == $(this).text()) {
-            console.log("MATCH")
-
             
+            // Found corresponing coffee name
+            // Calculate new coffee and animate
             coffee = coffeeList[prop]["value"]
             calc(coffee)
             setAnimation(t_caffeine, t_calories, t_price)
@@ -143,27 +140,35 @@ $("#dropList").on("click", "li", function(){
     }    
 })
 
-
+// Add element to dropdown list
 function dropdownAdd(name) {
     
+    // Create elements
     var li = document.createElement("li")
     var center = document.createElement("center")
     var text = document.createTextNode(name)
     
+    // Nest center inside li
     center.appendChild(text)
     li.appendChild(center)
     
+    // Grab list
     var list = document.getElementById("dropList")
     
+    // Append li to list
     list.appendChild(li)
 }
 
 // add object to array
 function addObj(keyName, val) { 
+    
+    // Create coffee object
     var obj = {
         key: keyName,
         value: jQuery.extend({}, val)
     }
+    
+    // Append to coffeeList
     coffeeList.push(obj)
 }
 
