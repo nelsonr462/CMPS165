@@ -165,3 +165,23 @@
     margin-bottom: 0 !important;
 }
 
+
+/* BUTTON */
+
+.btn-light {
+  background-color: #b0742b;
+  border-color: #b0742b;
+    color: white;
+}
+
+.btn-medium{
+  background-color: #764F1F;
+  border-color: #764F1F;
+    color: white;
+}
+
+.btn-dark {
+  background-color: #5c3d16;
+  border-color: #5c3d16;
+    color: white;
+}
