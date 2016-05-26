@@ -1,4 +1,6 @@
 function setAnimation(t_caffeine, t_calories, t_price) {
+  
+    
     
     // Define max values for data normalization
     var max_caffeine = 243
@@ -6,38 +8,35 @@ function setAnimation(t_caffeine, t_calories, t_price) {
     var max_price = 1.0616659
 
     var caffeine = new Chartist.Pie('.caffeine', {
-//    series: [20, 10, 30, 40]
-    series: [t_caffeine / max_caffeine * 100]   
+    series: [t_caffeine]
 
   }, {
     donut: true,
     donutWidth: 30,
     startAngle: 270,
-    total: 200,
-    showLabel: false,
+    total: max_caffeine * 2,
+    showLabel: false
   });
   
   var calories = new Chartist.Pie('.calories', {
-//    series: [20, 10, 30, 40]
-  series: [t_calories / max_calories * 100]
+  series: [t_calories]
 
 
   }, {
     donut: true,
     donutWidth: 30,
     startAngle: 270,
-    total: 200,
+    total: max_calories * 2,
     showLabel: false
   });
   
   var price = new Chartist.Pie('.price', {
-//    series: [20, 10, 30, 40]
-  series: [t_price / max_price * 100]
+  series: [t_price]
   }, {
     donut: true,
     donutWidth: 30,
     startAngle: 270,
-    total: 200,
+    total: max_price * 2,
     showLabel: false
   });   
 
@@ -45,6 +44,7 @@ function setAnimation(t_caffeine, t_calories, t_price) {
     caffeine.on('draw', animateOnDraw)
     calories.on('draw', animateOnDraw)
     price.on('draw', animateOnDraw)
+    
 }
   
 function animateOnDraw (data) {

@@ -156,13 +156,18 @@
     padding-bottom: 80px!important
 }
 
+.graphData {
+    margin-top: -70px !important;
+    margin-bottom: 0 !important;
+}
+
 .graphDetail {
-    font-size: 12px;
+    font-size: 10px;
+    margin-top: -12px !important;
 }
 
 .graphTitle {
-    margin-top: -70px !important;
-    margin-bottom: 0 !important;
+    
 }
 
 
@@ -184,4 +189,11 @@
   background-color: #5c3d16;
   border-color: #5c3d16;
     color: white;
+}
+
+
+.ct-label {
+    font-size: 14px !important;
+    font-family: Montserrat !important;
+    font-style: bold !important;
 }

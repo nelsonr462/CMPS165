@@ -33,6 +33,8 @@ $(".bean").click(function(){
     
     // Update animation accordingly
     setAnimation(t_caffeine, t_calories, t_price)
+    
+    
 })
 
 // Set method
@@ -327,8 +329,24 @@ function calc(coffeeVal) {
     console.log("Calories: "+t_calories)
     console.log("Flavor: "+ t_flavor)
     console.log("Price: "+t_price)
+    
+    
+    // Update Graph Labels
+    var caffeineLabel = $(".graphData")[0]
+    var calorieLabel = $(".graphData")[1]
+    var priceLabel = $(".graphData")[2]
+    
+    $(caffeineLabel).text(Math.round(t_caffeine * 100) / 100 + " mg")
+    $(calorieLabel).text(Math.round(t_calories * 100) / 100)
+    $(priceLabel).text("$"+t_price.toFixed(2))
+    
 }
 
 // Display inital animation
 calc(coffee)
 setAnimation(t_caffeine, t_calories, t_price)
+
+// Fix Scrollbar lag
+$(".mCustomScrollbar").mCustomScrollbar({
+    scrollInertia: 1
+});
