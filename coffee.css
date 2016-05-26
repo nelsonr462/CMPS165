@@ -75,14 +75,20 @@
 .main .dropdown {
     margin: 20px;
     cursor: pointer !important;
+
 }
 
-.ul {
+.dropList {
     background-color: #FFFFFF !important;
+    height: auto !important;
+    max-height: 90px !important;
+    overflow-x: hidden !important;
+    left: 15px;
+    right: 15px;
 }
 
-.li:hover {
-    background-color: #FFAD33 !important;
+li:hover {
+    background-color: #DDDDDD !important;
 }
 
 /* Rows and content*/
@@ -144,6 +150,7 @@
     height: 100vh;
     width: 100%;
     padding-top: 15vh;
+    overflow-y: auto;
 }
 .modSide {
     background-color: #CCCCCC;
