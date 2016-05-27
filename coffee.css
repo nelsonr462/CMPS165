@@ -227,4 +227,10 @@ li:hover {
     color: white;
 }
 
+/* TOOLTIP STYLING */
+
+.tipInfo {
+    padding:  0px 15px 0px 0px;
+    list-style-type: none;
+}
 
