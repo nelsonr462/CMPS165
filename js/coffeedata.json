@@ -108,8 +108,8 @@ var data =
       "milk_price": 0.07
     },
     {
-      "name": "NoMilk"
-      "calorie_ounce_milk": 0,
+      "name": "NoMilk",
+      "calorie_ounce_milk": 0.0,
       "milk_flavor": 0,
       "milk_price": 0
     }
