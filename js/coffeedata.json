@@ -52,7 +52,7 @@ var data =
       "gramsPerCup": 8
     },
     {
-      "name": "Cold Brew",
+      "name": "ColdBrew",
       "caffeine_mg": 95,
       "size": 8,
       "calorie_ounce_method": 0.125,
