@@ -90,22 +90,28 @@ var data =
   
   "milk": [
     {
-      "name": "Cow Milk",
+      "name": "CowMilk",
       "calorie_ounce_milk": 17.5,
       "milk_flavor": 0.1,
       "milk_price": 0.04
     },
     {
-      "name": "Almond Milk",
+      "name": "AlmondMilk",
       "calorie_ounce_milk": 3.75,
       "milk_flavor": 0.1,
       "milk_price": 0.08
     },
     {
-      "name": "Soy Milk",
+      "name": "SoyMilk",
       "calorie_ounce_milk": 12.5,
       "milk_flavor": 0.1,
       "milk_price": 0.07
+    },
+    {
+      "name": "NoMilk"
+      "calorie_ounce_milk": 0,
+      "milk_flavor": 0,
+      "milk_price": 0
     }
   ],
   
@@ -127,6 +133,12 @@ var data =
       "calorie_ounce_sweetener": 74,
       "sweetener_flavor": 0.3,
       "sweetener_price": 0.19
+    },
+    {
+      "name": "NoSweet",
+      "calorie_ounce_sweetener": 0,
+      "sweetener_flavor": 0,
+      "sweetener_price": 0.0
     }
   ]
 }
