@@ -28,7 +28,7 @@ var data =
   "methods": [
     {
       "name": "Chemex",
-      "caffeine_mg": 130,
+      "caffeine_mg": 145,
       "size": 8,
       "calorie_ounce_method": 0.25,
       "method_flavor": 0.25,
@@ -37,7 +37,7 @@ var data =
     },
     {
       "name": "Siphon",
-      "caffeine_mg": 145,
+      "caffeine_mg": 130,
       "size": 8,
       "calorie_ounce_method": 0.25,
       "method_flavor": 0.25,
