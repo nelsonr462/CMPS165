@@ -1,6 +1,6 @@
 /*
 ===================================================
-PLEASE REFER TO tipContent.html FOR EDITING CONTENT
+PLEASE REFER TO static/html/tipContent.html FOR EDITING CONTENT
 
 ༼ つ ◕_◕ ༽つ
 
