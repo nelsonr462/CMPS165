@@ -2,9 +2,11 @@ var mainCupFlag = true;
 var moveLeft = "-=20.3%"
 var moveRight = "+=20.3%"
 
+//<<<<<<< HEAD
 
-$( "#compare" ).click(function() {
+$("#compare" ).click(function() {
   $("#compare").prop('disabled', true);    
+
   $( ".mainCup" ).animate({
     left: (mainCupFlag==true ? moveLeft : moveRight)
   }, 500, function() {
