@@ -144,6 +144,15 @@ li:hover {
 }
 
 .mainCup {
+    left: 12%;
+    width: auto;
+    height: 60%;
+    position: relative;
+}
+
+.compareCup {
+    opacity: 0;
+    right: -8.3%;
     width: auto;
     height: 60%;
     position: relative;
