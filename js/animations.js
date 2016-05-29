@@ -1,4 +1,4 @@
-var mainCupFlag = true;
+mainCupFlag = true;
 var moveLeft = "-=20.3%"
 var moveRight = "+=20.3%"
 
@@ -6,7 +6,7 @@ var moveRight = "+=20.3%"
 $("#compare" ).click(function() {
     
   // Disable compare button  
-  $("#compare").prop('disabled', true);    
+  $("#compare").prop('disabled', true)    
 
   // Move cup left or right base on click
   $( ".mainCup" ).animate({
@@ -15,6 +15,27 @@ $("#compare" ).click(function() {
     
     // Set cup flag for future movement
     mainCupFlag = (mainCupFlag==true ? false : true)
+    
+//    if(!mainCupFlag) {
+//        $(".compareCup").fadeTo(250, .5)
+//    }
+//    else
+    
+//    if (!mainCupFlag) {
+//        $(".compareCup").on("click", "img", function () {
+//            coffeeFlag = "coffee2"
+//            setOptions(coffee2)
+//            $(".compareCup").fadeTo(250, .5)
+//            $(".mainCup").fadeTo(250, 1)
+//        })
+//    }
+//    else {
+//        $(".compareCup").off() 
+//        coffeeFlag = "coffee1"
+//        setOptions(coffee1)
+//        $(".compareCup").fadeTo(250, .5)
+//        $(".mainCup").fadeTo(250, 1)
+//    }
     
     // Enable compare button, animation complete
     $("#compare").prop('disabled', false);
