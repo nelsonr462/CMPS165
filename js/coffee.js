@@ -15,7 +15,7 @@ var coffeeSet = {
     bean: "Arabica",
     method: "Siphon",
     roast: "Light",
-    milk: "Cow Milk",
+    milk: "CowMilk",
     sweetener: "Honey"
 }
 
@@ -27,6 +27,10 @@ $(".bean").click(function(){
     // Set coffee attribute
     coffee.bean = $(this).attr('data')
     console.log(coffee.bean)
+    
+    // Set options
+    $("#Arabica").fadeTo(250, ($(this).attr("data") == "Arabica" ? 1 : .5))
+    $("#Robusta").fadeTo(250, ($(this).attr("data") == "Robusta" ? 1 : .5))
    
     // Calculate new coffee results based on changed attribute
     calc(coffee)
@@ -44,6 +48,13 @@ $(".method").click(function(){
     coffee.method = $(this).attr('data')
     console.log(coffee.method)
     
+    // Set options
+    $("#Chemex").fadeTo(250, ($(this).attr("data") == "Chemex" ? 1 : .5))
+    $("#Siphon").fadeTo(250, ($(this).attr("data") == "Siphon" ? 1 : .5))
+    $("#ColdBrew").fadeTo(250, ($(this).attr("data") == "ColdBrew" ? 1 : .5))
+    $("#Espresso").fadeTo(250, ($(this).attr("data") == "Espresso" ? 1 : .5))
+    $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .5))
+    
     // Calculate new coffee results based on changed attribute
     calc(coffee)
     
@@ -57,6 +68,11 @@ $(".roast").click(function(){
     // Set coffee attribute
     coffee.roast = $(this).attr('data')
     console.log(coffee.roast)
+    
+    // Set options
+    $("#Light").fadeTo(250, ($(this).attr("data") == "Light" ? 1 : .5))
+    $("#Medium").fadeTo(250, ($(this).attr("data") == "Medium" ? 1 : .5))
+    $("#Dark").fadeTo(250, ($(this).attr("data") == "Dark" ? 1 : .5))    
     
     // Calculate new coffee results based on changed attribute
     calc(coffee)
@@ -72,6 +88,11 @@ $(".milk").click(function(){
     coffee.milk = $(this).attr('data')
     console.log(coffee.milk)
     
+    // Set options
+    $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .5))
+    $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .5))
+    $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .5))
+    
     // Calculate new coffee results based on changed attribute
     calc(coffee)
     
@@ -85,6 +106,11 @@ $(".sweetener").click(function(){
     // Set coffee attribute    
     coffee.sweetener = $(this).attr('data')
     console.log(coffee.sweetener)
+    
+    // Set options
+    $("#Sugar").fadeTo(250, ($(this).attr("data") == "Sugar" ? 1 : .5))
+    $("#Honey").fadeTo(250, ($(this).attr("data") == "Honey" ? 1 : .5))
+    $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .5))
     
     // Calculate new coffee results based on changed attribute
     calc(coffee)
@@ -140,36 +166,35 @@ $("#dropList").on("click", "li", function(){
     }    
 })
 
-$(".bean").click(function() {
-    $("#Arabica").fadeTo(250, ($(this).attr("data") == "Arabica" ? 1 : .5))
-    $("#Robusta").fadeTo(250, ($(this).attr("data") == "Robusta" ? 1 : .5))
-})
-
-$(".roast").click(function() {
-    $("#Light").fadeTo(250, ($(this).attr("data") == "Light" ? 1 : .5))
-    $("#Medium").fadeTo(250, ($(this).attr("data") == "Medium" ? 1 : .5))
-    $("#Dark").fadeTo(250, ($(this).attr("data") == "Dark" ? 1 : .5))
-})
-
-$(".method").click(function() {
-    $("#Chemex").fadeTo(250, ($(this).attr("data") == "Chemex" ? 1 : .5))
-    $("#Siphon").fadeTo(250, ($(this).attr("data") == "Siphon" ? 1 : .5))
-    $("#ColdBrew").fadeTo(250, ($(this).attr("data") == "ColdBrew" ? 1 : .5))
-    $("#Espresso").fadeTo(250, ($(this).attr("data") == "Espresso" ? 1 : .5))
-    $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .5))
-})
-
-$(".milk").click(function() {
-    $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .5))
-    $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .5))
-    $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .5))
-})
-
-$(".sweetener").click(function() {
-    $("#Sugar").fadeTo(250, ($(this).attr("data") == "Sugar" ? 1 : .5))
-    $("#Honey").fadeTo(250, ($(this).attr("data") == "Honey" ? 1 : .5))
-    $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .5))
-})
+// Set all options at once
+function setOptions(obj) {
+    
+    // Set bean
+    $("#Arabica").fadeTo(250, (obj.bean == "Arabica" ? 1 : .5))
+    $("#Robusta").fadeTo(250, (obj.bean == "Robusta" ? 1 : .5))
+    
+    // Set roast
+    $("#Light").fadeTo(250, (obj.roast == "Light" ? 1 : .5))
+    $("#Medium").fadeTo(250, (obj.roast == "Medium" ? 1 : .5))
+    $("#Dark").fadeTo(250, (obj.roast == "Dark" ? 1 : .5))
+    
+    // Set method
+    $("#Chemex").fadeTo(250, (obj.method == "Chemex" ? 1 : .5))
+    $("#Siphon").fadeTo(250, (obj.method == "Siphon" ? 1 : .5))
+    $("#ColdBrew").fadeTo(250, (obj.method == "ColdBrew" ? 1 : .5))
+    $("#Espresso").fadeTo(250, (obj.method == "Espresso" ? 1 : .5))
+    $("#Turkish").fadeTo(250, (obj.method == "Turkish" ? 1 : .5))
+    
+    // Ste milk
+    $("#CowMilk").fadeTo(250, (obj.milk == "CowMilk" ? 1 : .5))
+    $("#AlmondMilk").fadeTo(250, (obj.milk == "AlmondMilk" ? 1 : .5))
+    $("#SoyMilk").fadeTo(250, (obj.milk == "SoyMilk" ? 1 : .5))
+    
+    // Set sweetener
+    $("#Sugar").fadeTo(250, (obj.sweetener == "Sugar" ? 1 : .5))
+    $("#Honey").fadeTo(250, (obj.sweetener == "Honey" ? 1 : .5))
+    $("#Syrup").fadeTo(250, (obj.sweetener == "Syrup" ? 1 : .5))
+    }
 
 // Add element to dropdown list
 function dropdownAdd(name) {
@@ -395,6 +420,7 @@ function calc(coffeeVal) {
 }
 
 // Display inital animation
+setOptions(coffee)
 calc(coffee)
 setAnimation(t_caffeine, t_calories, t_price)
 
