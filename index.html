@@ -63,6 +63,7 @@
                     <!-- Arabica bean -->
                     <div class="col-sm-4">
                         <img src="static/img/beans/arabica.svg"
+                             id="Arabica"
                              class="bean"
                              data="Arabica">
                         <p class="itemLabel">ARABICA</p>
@@ -71,6 +72,7 @@
                     <!-- Robusta bean -->
                     <div class="col-sm-4">
                         <img src="static/img/beans/coffee-bean.svg"
+                             id="Robusta"
                              class="bean"
                              data="Robusta">
                              <p class="itemLabel">ROBUSTA</p>
@@ -82,18 +84,29 @@
                     
                     <!-- Light roast -->
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-light roast" data="Light">LIGHT</button>
+                        <button type="button" 
+                                class="btn btn-light roast"
+                                id="Light"
+                                data="Light">LIGHT
+                        </button>
                     </div>
                     
                     <!-- Medium roast -->
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-medium roast" data="Medium">MEDIUM</button>
-
+                        <button type="button"
+                                class="btn btn-medium roast"
+                                id="Medium"
+                                data="Medium">MEDIUM
+                        </button>
                     </div>
                     
                     <!-- Dark roast -->
                     <div class="col-sm-4">
-                        <button type="button" class="btn btn-dark roast" data="Dark">DARK</button>
+                        <button type="button"
+                                class="btn btn-dark roast"
+                                id="Dark"
+                                data="Dark">DARK
+                        </button>
                     </div>
                     
                 </div>
@@ -107,6 +120,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/methods/chemex.svg"
                              class="chemex method"
+                             id="Chemex"
                              data="Chemex">
                          <p class="itemLabel">CHEMEX</p>
                     </div>
@@ -115,6 +129,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/methods/siphen.png"
                              class="siphen method"
+                             id="Siphon"
                              data="Siphon">
                          <p class="itemLabel">SIPHON</p>
                     </div>
@@ -123,6 +138,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/methods/cold%20brew.png"
                              class="coldbrew image method"
+                             id="ColdBrew"
                              data="ColdBrew">
                          <p class="itemLabel">COLD BREW</p>
                     </div>
@@ -133,6 +149,7 @@
                     <div class="col-sm-3">
                         <img src="static/img/methods/espresso-machine.svg"
                              class="image method"
+                             id="Espresso"
                              data="Espresso">
                          <p class="itemLabel">ESPRESSO</p>
                         
@@ -144,6 +161,7 @@
                     <div class="col-sm-3">
                         <img src="static/img/methods/cezve.svg"
                              class="turkish image method"
+                             id="Turkish"
                              data="Turkish">
                          <p class="itemLabel">TURKISH</p>
                         
@@ -159,6 +177,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/milks/cowmilk.svg"
                              class="milk"
+                             id="CowMilk"
                              data="CowMilk">
                         <p class="itemLabel">MILK</p>
                     </div>
@@ -167,6 +186,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/milks/almondmilk.png"
                              class="milk"
+                             id="AlmondMilk"
                              data="AlmondMilk">
                         <p class="itemLabel">ALMOND MILK</p>
                     </div>
@@ -175,6 +195,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/milks/soymilk.svg"
                              class="milk"
+                             id="SoyMilk"
                              data="SoyMilk">
                          <p class="itemLabel">SOY MILK</p>
                     </div>
@@ -183,6 +204,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/sweeteners/sachet-sugar.svg"
                              class="sweetener"
+                             id="Sugar"
                              data="Sugar">
                         <p class="itemLabel">SUGAR</p>
                     </div>
@@ -191,6 +213,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/sweeteners/honeypot.svg"
                              class="sweetener"
+                             id="Honey"
                              data="Honey">
                          <p class="itemLabel">HONEY</p>
                     </div>
@@ -199,6 +222,7 @@
                     <div class="col-sm-4">
                         <img src="static/img/sweeteners/sugar-pot.svg"
                              class="sweetener"
+                             id="Syrup"
                              data="Syrup">
                         <p class="itemLabel">SYRUP</p>
                     </div>
@@ -249,7 +273,7 @@
                         <img  src="static/img/glass-coffee-mug.png"
                             class="compareCup">
                     </div>
-                    <button id="compare" type="button" class="btn btn-primary" data="Light">Compare Cups</button>
+                    <button id="compare" type="button" class="btn btn-primary" >Compare Cups</button>
                 </div>
                 
                 <!-- Name and extra info-->
@@ -260,7 +284,7 @@
                     
                     <!-- Save coffee button -->
                     <div class="col-sm-6">
-                        <button type="button" class="btn btn-primary save" data="Light">Save this cup!</button>
+                        <button type="button" class="btn btn-primary save">Save this cup!</button>
                         <input type="text" id="txt"/>
                     </div>
                     

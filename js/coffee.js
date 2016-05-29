@@ -140,6 +140,37 @@ $("#dropList").on("click", "li", function(){
     }    
 })
 
+$(".bean").click(function() {
+    $("#Arabica").fadeTo(250, ($(this).attr("data") == "Arabica" ? 1 : .5))
+    $("#Robusta").fadeTo(250, ($(this).attr("data") == "Robusta" ? 1 : .5))
+})
+
+$(".roast").click(function() {
+    $("#Light").fadeTo(250, ($(this).attr("data") == "Light" ? 1 : .5))
+    $("#Medium").fadeTo(250, ($(this).attr("data") == "Medium" ? 1 : .5))
+    $("#Dark").fadeTo(250, ($(this).attr("data") == "Dark" ? 1 : .5))
+})
+
+$(".method").click(function() {
+    $("#Chemex").fadeTo(250, ($(this).attr("data") == "Chemex" ? 1 : .5))
+    $("#Siphon").fadeTo(250, ($(this).attr("data") == "Siphon" ? 1 : .5))
+    $("#ColdBrew").fadeTo(250, ($(this).attr("data") == "ColdBrew" ? 1 : .5))
+    $("#Espresso").fadeTo(250, ($(this).attr("data") == "Espresso" ? 1 : .5))
+    $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .5))
+})
+
+$(".milk").click(function() {
+    $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .5))
+    $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .5))
+    $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .5))
+})
+
+$(".sweetener").click(function() {
+    $("#Sugar").fadeTo(250, ($(this).attr("data") == "Sugar" ? 1 : .5))
+    $("#Honey").fadeTo(250, ($(this).attr("data") == "Honey" ? 1 : .5))
+    $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .5))
+})
+
 // Add element to dropdown list
 function dropdownAdd(name) {
     
