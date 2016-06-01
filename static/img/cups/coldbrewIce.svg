@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="439px" height="443px" viewBox="0 0 439 443" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>ice</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="17.4920045" y="16.339871" width="173" height="179" rx="18"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="173" height="179" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="250.746981" y="52.9260154" width="173" height="179" rx="18"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="173" height="179" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="85.5090857" y="269.597219" width="150.891" height="156.124214" rx="18"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="150.891" height="156.124214" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.85">
+        <g id="ICEd" transform="translate(-133.000000, -201.000000)" stroke-width="50" stroke="#E1EFFF" fill="#FFFFFF">
+            <g id="take-away-coffee-3">
+                <g id="take-away-coffee-3-take-away-coffee-3" transform="translate(0.225859, 0.688701)">
+                    <g id="ice" transform="translate(129.000000, 197.000000)">
+                        <use id="Rectangle-25" mask="url(#mask-2)" transform="translate(103.992005, 105.839871) rotate(-12.000000) translate(-103.992005, -105.839871) " xlink:href="#path-1"></use>
+                        <use id="Rectangle-25" mask="url(#mask-4)" transform="translate(337.246981, 142.426015) rotate(18.000000) translate(-337.246981, -142.426015) " xlink:href="#path-3"></use>
+                        <use id="Rectangle-25" mask="url(#mask-6)" transform="translate(160.954586, 347.659326) rotate(58.000000) translate(-160.954586, -347.659326) " xlink:href="#path-5"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
