@@ -4,15 +4,14 @@ var t_calories
 var t_flavor
 var t_price
 
-<<<<<<< Updated upstream
+
 var cupClickFlag = false
-=======
+
 var max_caffeine = 243
 var max_calories = 259
 var max_price = 1.0616659
 
 var mainCupFlag;
->>>>>>> Stashed changes
 
 var coffeeFlag = "coffee1"
 
@@ -281,9 +280,7 @@ function setOptions(obj) {
     $("#Syrup").fadeTo(250, (obj.sweetener == "Syrup" ? 1 : .5))
     }
 
-<<<<<<< Updated upstream
 
-=======
 function updateOrig() {
     caffeine_0.load({
         columns: [['data', t_caffeine/max_caffeine*100]]
@@ -307,7 +304,6 @@ function updateNew() {
         columns: [['data', t_price/max_price*100]]
     });
 }
->>>>>>> Stashed changes
 
 // Add element to dropdown list
 function dropdownAdd(name) {
