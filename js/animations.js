@@ -45,5 +45,5 @@ $("#compare" ).click(function() {
 // Fade compare cup in and out
 $("#compare").click(function () {
     this.toggle = !this.toggle;
-    $(".compareCup").stop().fadeTo(400, this.toggle ? 1 : 0);
+    $(".compareCup").stop().fadeTo(400, this.toggle ? .5 : 0);
 });

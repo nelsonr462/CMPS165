@@ -4,7 +4,7 @@ var t_calories
 var t_flavor
 var t_price
 
-var mainCupFlag;
+var cupClickFlag = false
 
 var coffeeFlag = "coffee1"
 
@@ -37,23 +37,46 @@ var coffee1 = coffeeSet1
 var coffee2 = coffeeSet2
 
 
+/* =====================================================
+
+                    ON CLICK HANDLERS
+
+========================================================*/
+
+
+// --------------------CUPS-----------------------------
+
 // Set flag, options and cup opacity based on cup clicked
 $(".compareCup").click(function () {
-    coffeeFlag = "coffee2"
-    setOptions(coffee2)
-    $(".compareCup").fadeTo(250, 1)
-    $(".mainCup").fadeTo(250, .5)
+    if(cupClickFlag) {
+        coffeeFlag = "coffee2"
+        setOptions(coffee2)
+        $(".compareCup").fadeTo(250, 1)
+        $(".mainCup").fadeTo(250, .5)
+    }
     
 })
 $(".mainCup").click(function () {
-    coffeeFlag = "coffee1"
-    setOptions(coffee1)
-    $(".compareCup").fadeTo(250, .5)
-    $(".mainCup").fadeTo(250, 1)
+    if(cupClickFlag) {
+        coffeeFlag = "coffee1"
+        setOptions(coffee1)
+        $(".compareCup").fadeTo(250, .5)
+        $(".mainCup").fadeTo(250, 1)
+    }
+})
+
+$("#compare").click(function () {
+    cupClickFlag = !cupClickFlag
+    if(coffeeFlag == "coffee2") {
+        setOptions(coffee1)
+        $(".compareCup").fadeTo(250, .5)
+        $(".mainCup").fadeTo(250, 1)
+    }
+    
 })
 
 
-
+//-----------------BEANS-----------------------
 
 // Set bean
 $(".bean").click(function(){
@@ -74,6 +97,8 @@ $(".bean").click(function(){
     
     
 })
+
+// --------------------BREW METHODS -----------------
 
 // Set method
 $(".method").click(function(){
@@ -96,6 +121,8 @@ $(".method").click(function(){
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
+
+// -----------------------------ROAST----------------------------
 // Set roast
 $(".roast").click(function(){
     
@@ -115,6 +142,8 @@ $(".roast").click(function(){
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
+
+//-----------------------------MILK------------------------------
 // Set milk
 $(".milk").click(function(){
     
@@ -134,6 +163,8 @@ $(".milk").click(function(){
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
+
+//--------------------------SWEETENER----------------------------------
 // Set sweetener
 $(".sweetener").click(function(){
     
@@ -153,6 +184,8 @@ $(".sweetener").click(function(){
     setAnimation(t_caffeine, t_calories, t_price)
 })
 
+
+//-----------------------------FUNCTION BUTTONS--------------------------------
 // Save current cup of coffee and add to coffeeList
 $(".save").click(function(){
    
@@ -200,6 +233,9 @@ $("#dropList").on("click", "li", function(){
         }
     }    
 })
+//=====================END ONCLICK LISTENERS==========================
+
+
 
 // Whenever
 
@@ -233,25 +269,7 @@ function setOptions(obj) {
     $("#Syrup").fadeTo(250, (obj.sweetener == "Syrup" ? 1 : .5))
     }
 
-//$("#compare").click(function () {
-//    this.toggle = !this.toggle;
-//    document.getElementsByClassName('compareCup')
-//            .style.pointerEvents = this.toggle ? 'auto' : 'none';
-//})
 
-//function enableCompare() {
-//    if (mainCupFlag) {
-//        document.getElementsByClassName('compareCup')
-//            .style.pointerEvents = 'auto';
-//    }
-//}
-//
-//function disableCompare() {
-//    if (!mainCupFlag) {
-//        document.getElementById('compareCup')
-//            .style.pointerEvents = 'none';
-//    }
-//}
 
 // Add element to dropdown list
 function dropdownAdd(name) {
