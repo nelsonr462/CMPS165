@@ -6,9 +6,6 @@ var caffeine_0 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-        //onclick: function (d, i) { console.log("onclick", d, i); },
-        //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -18,19 +15,15 @@ var caffeine_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF0000'], // the three color levels for the percentage values.
+        pattern: ['#FF0000'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
@@ -45,9 +38,6 @@ var caffeine_1 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-//        onclick: function (d, i) { console.log("onclick", d, i); },
-//        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -57,19 +47,15 @@ var caffeine_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF8300'], // the three color levels for the percentage values.
+        pattern: ['#FF8300'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
@@ -84,9 +70,6 @@ var calories_0 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-//        onclick: function (d, i) { console.log("onclick", d, i); },
-//        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -96,19 +79,15 @@ var calories_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF0000'], // the three color levels for the percentage values.
+        pattern: ['#FF0000'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
@@ -123,9 +102,6 @@ var calories_1 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-//        onclick: function (d, i) { console.log("onclick", d, i); },
-//        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -135,19 +111,15 @@ var calories_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF8300'], // the three color levels for the percentage values.
+        pattern: ['#FF8300'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
@@ -162,9 +134,6 @@ var price_0 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-//        onclick: function (d, i) { console.log("onclick", d, i); },
-//        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -174,19 +143,15 @@ var price_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF0000'], // the three color levels for the percentage values.
+        pattern: ['#FF0000'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
@@ -201,9 +166,6 @@ var price_1 = c3.generate({
             ['data']
         ],
         type: 'gauge',
-//        onclick: function (d, i) { console.log("onclick", d, i); },
-//        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     tooltip: {
         show: false
@@ -213,30 +175,18 @@ var price_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false // to turn off the min/max labels.
+            show: false
         },
-//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-//    max: 100, // 100 is default
     units: ' mg',
-    width: 39 // for adjusting arc thickness
+    width: 39
     },
     color: {
-        pattern: ['#FF8300'], // the three color levels for the percentage values.
+        pattern: ['#FF8300'],
         threshold: {
-            unit: 'none', // percentage is default
-//            max: 200, // 100 is default
-//            values: [30, 60, 90, 100]
+            unit: 'none',
         }
     },
     size: {
         height: 180
     }
 });
-
-
-//    chart.load({
-//        columns: [['data', 70]]
-//    });
-
-
-

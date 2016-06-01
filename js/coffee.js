@@ -40,8 +40,6 @@ var coffeeSet2 = {
     sweetener: "Syrup"
 } 
 
-var coffee1 = coffeeSet1
-var coffee2 = coffeeSet2
 
 
 /* =====================================================
@@ -57,7 +55,7 @@ var coffee2 = coffeeSet2
 $(".compareCup").click(function () {
     if(cupClickFlag) {
         coffeeFlag = "coffee2"
-        setOptions(coffee2)
+        setOptions(coffeeSet2)
         $(".compareCup").fadeTo(250, 1)
         $(".mainCup").fadeTo(250, .5)
     }
@@ -66,7 +64,7 @@ $(".compareCup").click(function () {
 $(".mainCup").click(function () {
     if(cupClickFlag) {
         coffeeFlag = "coffee1"
-        setOptions(coffee1)
+        setOptions(coffeeSet1)
         $(".compareCup").fadeTo(250, .5)
         $(".mainCup").fadeTo(250, 1)
     }
@@ -75,7 +73,7 @@ $(".mainCup").click(function () {
 $("#compare").click(function () {
     cupClickFlag = !cupClickFlag
     if(coffeeFlag == "coffee2") {
-        setOptions(coffee1)
+        setOptions(coffeeSet1)
         coffeeFlag="coffee1"
         $(".compareCup").fadeTo(250, .5)
         $(".mainCup").fadeTo(250, 1)
@@ -90,7 +88,7 @@ $("#compare").click(function () {
 $(".bean").click(function(){
     
     // Set coffee attribute
-    (coffeeFlag == "coffee1" ? coffee1 : coffee2).bean = $(this).attr('data')
+    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).bean = $(this).attr('data')
     //console.log(coffee.bean)
     
     // Set options
@@ -98,7 +96,7 @@ $(".bean").click(function(){
     $("#Robusta").fadeTo(250, ($(this).attr("data") == "Robusta" ? 1 : .5))
    
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
     
     // Update animation accordingly
     coffeeFlag == "coffee1" ? updateOrig() : updateNew()
@@ -112,7 +110,7 @@ $(".bean").click(function(){
 $(".method").click(function(){
     
     // Set coffee attribute
-    (coffeeFlag == "coffee1" ? coffee1 : coffee2).method = $(this).attr('data')
+    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).method = $(this).attr('data')
     //console.log(coffee.method)
     
     // Set options
@@ -123,7 +121,7 @@ $(".method").click(function(){
     $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .5))
     
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet1)
     
     
     
@@ -138,7 +136,7 @@ $(".method").click(function(){
 $(".roast").click(function(){
     
     // Set coffee attribute
-    (coffeeFlag == "coffee1" ? coffee1 : coffee2).roast = $(this).attr('data')
+    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).roast = $(this).attr('data')
     //console.log(coffee.roast)
     
     // Set options
@@ -147,7 +145,7 @@ $(".roast").click(function(){
     $("#Dark").fadeTo(250, ($(this).attr("data") == "Dark" ? 1 : .5))    
     
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
     
     // Update animation accordingly
     coffeeFlag == "coffee1" ? updateOrig() : updateNew()
@@ -159,7 +157,7 @@ $(".roast").click(function(){
 $(".milk").click(function(){
     
     // Set coffee attribute
-    (coffeeFlag == "coffee1" ? coffee1 : coffee2).milk = $(this).attr('data')
+    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).milk = $(this).attr('data')
     //console.log(coffee.milk)
     
     // Set options
@@ -168,7 +166,7 @@ $(".milk").click(function(){
     $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .5))
     
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
     
     // Update animation accordingly
     coffeeFlag == "coffee1" ? updateOrig() : updateNew()
@@ -180,7 +178,7 @@ $(".milk").click(function(){
 $(".sweetener").click(function(){
     
     // Set coffee attribute    
-    (coffeeFlag == "coffee1" ? coffee1 : coffee2).sweetener = $(this).attr('data')
+    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).sweetener = $(this).attr('data')
     //console.log(coffee.sweetener)
     
     // Set options
@@ -189,7 +187,7 @@ $(".sweetener").click(function(){
     $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .5))
     
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
     
     // Update animation accordingly
     coffeeFlag == "coffee1" ? updateOrig() : updateNew()
@@ -219,7 +217,7 @@ $(".save").click(function(){
         dropdownAdd(txt)
         
         // Add current coffee object to array
-        addObj(txt, (coffeeFlag == "coffee1" ? coffee1 : coffee2))
+        addObj(txt, (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2))
         console.log(coffeeList)
         
         // Reset val back to empty string
@@ -230,26 +228,28 @@ $(".save").click(function(){
 // Set the current coffee object to the new one requested
 // Then perform the calculations and animate accordingly
 $("#dropList").on("click", "li", function(){
-    
     // Check if name already exists
     for (var prop in coffeeList) {
         if (coffeeList[prop]["key"] == $(this).text()) {
             
-            // Found corresponing coffee name
-            // Calculate new coffee and animate
-            if (coffeeFlag == "coffee1") { calc(coffee1) }
-            else { calc(coffee2) }
-            calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
-            coffeeFlag == "coffee1" ? updateOrig() : updateNew()
+            // Update coffe object
+            $.extend(true, coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2, {
+                bean: coffeeList[prop]["value"].bean,
+                method: coffeeList[prop]["value"].method,
+                roast: coffeeList[prop]["value"].roast,
+                milk: coffeeList[prop]["value"].milk,
+                sweetener: coffeeList[prop]["value"].sweetener,
+            });
             
+            // Perform calc, set options and update flag
+            setOptions(coffeeList[prop]["value"])
+            calc(coffeeList[prop]["value"])
+            coffeeFlag == "coffee1" ? updateOrig() : updateNew()
         }
-    }    
+    } 
 })
 //=====================END ONCLICK LISTENERS==========================
 
-
-
-// Whenever
 
 // Set all options at once
 function setOptions(obj) {
@@ -339,7 +339,7 @@ function addObj(keyName, val) {
 }
 
 // Calculate calories, caffeine, flavor and price of a given cup of coffee
-function calc(coffeeVal) {
+function calc(coffeeObj) {
     
     // Initialize base flavor
     flavor = 0.5
@@ -396,8 +396,7 @@ function calc(coffeeVal) {
             if(!obj.hasOwnProperty(prop)) continue;
 
             // Adjust variables based on bean type
-            if (obj[prop]["name"] ==
-                (coffeeFlag == "coffee1" ? coffee1 : coffee2).bean) {
+            if (obj[prop]["name"] == coffeeObj.bean) {
                 
                 //console.log(obj[prop]["name"])
                 
@@ -408,8 +407,7 @@ function calc(coffeeVal) {
             }
                 
             // Adjust variables based on roast type
-            if (obj[prop]["name"] ==
-                (coffeeFlag == "coffee1" ? coffee1 : coffee2).roast) {
+            if (obj[prop]["name"] == coffeeObj.roast) {
                 
                 //console.log(obj[prop]["name"])
                 
@@ -419,8 +417,7 @@ function calc(coffeeVal) {
             }
             
             // Adjust variables based on method type
-            if (obj[prop]["name"] ==
-                (coffeeFlag == "coffee1" ? coffee1 : coffee2).method) {
+            if (obj[prop]["name"] == coffeeObj.method) {
                 
                 //console.log(obj[prop]["name"])
                 
@@ -436,8 +433,7 @@ function calc(coffeeVal) {
             }
             
             // Adjust variables based on milk type
-            if (obj[prop]["name"] ==
-                (coffeeFlag == "coffee1" ? coffee1 : coffee2).milk) {
+            if (obj[prop]["name"] == coffeeObj.milk) {
                 
                 //console.log(obj[prop]["name"])
                 
@@ -448,8 +444,7 @@ function calc(coffeeVal) {
             }
             
             // Adjust variables based on sweetener type
-            if (obj[prop]["name"] ==
-                (coffeeFlag == "coffee1" ? coffee1 : coffee2).sweetener) {
+            if (obj[prop]["name"] == coffeeObj.sweetener) {
                 
                 //console.log(obj[prop]["name"])
                 
@@ -499,38 +494,6 @@ function calc(coffeeVal) {
     // Flavor
     t_flavor = bean_flavor + method_flavor + roast_flavor + milk_flavor + sweetener_flavor
     
-//    console.log("Size: "+size)
-//    console.log("gramsPerCup: "+gramsPerCup)
-//    console.log("Method: "+method)
-//    console.log("caffeine_mg: "+caffeine_mg)
-//    console.log("base_caffeine_scalar: "+base_caffeine_scalar)
-//    console.log("caffeine_scalar: "+caffeine_scalar)
-//    console.log("calorie_ounce_method: "+calorie_ounce_method)
-//    console.log("calorie_ounce_milk: "+calorie_ounce_milk)
-//    console.log("calorie_ounce_sweetener: "+calorie_ounce_sweetener)
-//    console.log("bean_flavor: "+bean_flavor)
-//    console.log("method_flavor: "+method_flavor)
-//    console.log("roast_flavor: "+roast_flavor)
-//    console.log("milk_flavor: "+milk_flavor)
-//    console.log("sweetener_flavor: "+sweetener_flavor)
-//    console.log("bean_price: "+bean_price)
-//    console.log("milk_price: "+milk_price)
-//    console.log("sweetener_price: "+sweetener_price)
-//    console.log("BEGIN COFFEE STATS")
-//    console.log("Caffeine: "+t_caffeine+" mg")
-//    console.log("Calories: "+t_calories)
-//    console.log("Flavor: "+ t_flavor)
-//    console.log("Price: "+t_price)
-    console.log("BEGIN INFO")
-    console.log(coffeeFlag)
-    console.log((coffeeFlag == "coffee1" ? coffee1 : coffee2).bean)
-    console.log((coffeeFlag == "coffee1" ? coffee1 : coffee2).roast)
-    console.log((coffeeFlag == "coffee1" ? coffee1 : coffee2).method)
-    console.log((coffeeFlag == "coffee1" ? coffee1 : coffee2).milk)
-    console.log((coffeeFlag == "coffee1" ? coffee1 : coffee2).sweetener)
-    
-    
-    
     // Update Graph Labels
     var caffeineLabel = $(".graphData")[0]
     var calorieLabel = $(".graphData")[1]
@@ -543,9 +506,16 @@ function calc(coffeeVal) {
 }
 
 // Display inital animation
-setOptions(coffeeFlag == "coffee1" ? coffee1 : coffee2)
-calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
+setOptions(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
+
+// Calc coffee1 and create initial animation
+calc(coffeeSet1)
 updateOrig()
+
+// Create base coffee2 animation
+calc(coffeeSet2)
+updateNew()
+
 
 // Fix Scrollbar lag
 $(".mCustomScrollbar").mCustomScrollbar({
