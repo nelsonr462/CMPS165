@@ -120,6 +120,9 @@ $(".method").click(function(){
     $("#Espresso").fadeTo(250, ($(this).attr("data") == "Espresso" ? 1 : .5))
     $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .5))
     
+//    $(coffeeFlag == "coffee1" ? "#leftCup" : "#rightCup")
+//        .attr("src", "static/img/cups/espressoCup.svg")
+    
     // Calculate new coffee results based on changed attribute
     calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet1)
     

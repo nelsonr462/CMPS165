@@ -1,6 +1,6 @@
 mainCupFlag = true;
-var moveLeft = "-=20.3%"
-var moveRight = "+=20.3%"
+var moveLeft = "-=15.3%"
+var moveRight = "+=15.3%"
 
 // Move cup left and right
 $("#compare" ).click(function() {

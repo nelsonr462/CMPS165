@@ -36,9 +36,6 @@
         <!-- Custom Scrollbar JS-->
         <script src="libraries/jquery.mCustomScrollbar.js"></script>
         
-        <!-- Chartist JS-->
-        <script src="libraries/chartist.js"></script>
-        
         <!-- qTip import (ToolTips) -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
@@ -296,9 +293,9 @@
                 <!-- Coffee Cup-->
                 <div class="row">
                     <div class="col-sm-12 cupHolder">
-                        <img src="static/img/glass-coffee-mug.png"
+                        <img id="leftCup" src="static/img/glass-coffee-mug.png"
                             class="mainCup">
-                        <img  src="static/img/glass-coffee-mug.png"
+                        <img id="rightCup"  src="static/img/glass-coffee-mug.png"
                             class="compareCup">
                     </div>
                     <button id="compare" type="button" class="btn btn-primary" >Compare Cups</button>
@@ -323,28 +320,6 @@
                             <span class="caret"></span></button>
                             <ul id="dropList" class="dropdown-menu dropList"></ul>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Orig charts-->
-                <div class="row">
-                    
-                    <div id="caf0" class="col-sm-4">
-                    </div>
-                    <div id="cal0" class="col-sm-4">
-                    </div>
-                    <div id="price0" class="col-sm-4">
-                    </div>
-                </div>
-                
-                <!-- New charts-->
-                <div class="row">
-                    
-                    <div id="caf1" class="col-sm-4">
-                    </div>
-                    <div id="cal1" class="col-sm-4">
-                    </div>
-                    <div id="price1" class="col-sm-4">
                     </div>
                 </div>
                 
