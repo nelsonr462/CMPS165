@@ -76,6 +76,7 @@ $("#compare").click(function () {
     cupClickFlag = !cupClickFlag
     if(coffeeFlag == "coffee2") {
         setOptions(coffee1)
+        coffeeFlag="coffee1"
         $(".compareCup").fadeTo(250, .5)
         $(".mainCup").fadeTo(250, 1)
     }

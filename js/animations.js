@@ -16,27 +16,6 @@ $("#compare" ).click(function() {
     // Set cup flag for future movement
     mainCupFlag = (mainCupFlag==true ? false : true)
     
-//    if(!mainCupFlag) {
-//        $(".compareCup").fadeTo(250, .5)
-//    }
-//    else
-    
-//    if (!mainCupFlag) {
-//        $(".compareCup").on("click", "img", function () {
-//            coffeeFlag = "coffee2"
-//            setOptions(coffee2)
-//            $(".compareCup").fadeTo(250, .5)
-//            $(".mainCup").fadeTo(250, 1)
-//        })
-//    }
-//    else {
-//        $(".compareCup").off() 
-//        coffeeFlag = "coffee1"
-//        setOptions(coffee1)
-//        $(".compareCup").fadeTo(250, .5)
-//        $(".mainCup").fadeTo(250, 1)
-//    }
-    
     // Enable compare button, animation complete
     $("#compare").prop('disabled', false);
   });
