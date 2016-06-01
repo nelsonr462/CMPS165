@@ -3,9 +3,9 @@ function setAnimation(t_caffeine, t_calories, t_price) {
 
 
     // Define max values for data normalization
-    var max_caffeine = 243
-    var max_calories = 259
-    var max_price = 1.0616659
+     max_caffeine = 243
+     max_calories = 259
+     max_price = 1.0616659
 
     var caffeine = new Chartist.Pie('.caffeine', {
         series: [t_caffeine]

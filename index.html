@@ -15,6 +15,12 @@
         <!-- Load jQuery cdn -->
         <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
         
+        <!-- Load C3 cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+        
+        <!-- Load C3 css -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+        
         <!-- Load D3 cdn -->
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         
@@ -29,9 +35,6 @@
         
         <!-- Custom Scrollbar JS-->
         <script src="libraries/jquery.mCustomScrollbar.js"></script>
-        
-        <!-- Chartist CSS-->
-        <link rel="stylesheet" href="libraries/chartist.css" />
         
         <!-- Chartist JS-->
         <script src="libraries/chartist.js"></script>
@@ -236,28 +239,53 @@
             <!-- Begin Results Side-->
             <div class="col-sm-6 resultSide">
                 
-                <!--Graphs-->
+                <!-- Orig Graphs -->
                 <div class="row graphs">
                     <div class="resultTitle">
                         <p>YOUR COFFEE</p>
                     </div>
                 
                     <div class="col-sm-4">
-                        <div class="caffeine"></div>
+                        <div id="caf0"></div>
                         <p class="graphData">137</p>
                         <p class="graphTitle">CAFFEINE</p>
                         <p class="graphDetail">(per serving)</p>
                     </div>
                     
                     <div class="col-sm-4">
-                        <div class="calories"></div>
+                        <div id="cal0"></div>
                         <p class="graphData">137</p>
                         <p class="graphTitle">CALORIES</p>
                         <p class="graphDetail">(per serving)</p>
                     </div>
                     
                     <div class="col-sm-4">
-                        <div class="price"></div>
+                        <div id="price0"></div>
+                        <p class="graphData">137</p>
+                        <p class="graphTitle">PRICE</p>
+                        <p class="graphDetail">($USD per cup)</p>
+                    </div>
+                </div>
+                
+                <!-- New Graph -->
+                <div class="row graphs">
+                
+                    <div class="col-sm-4">
+                        <div id="caf1"></div>
+                        <p class="graphData">137</p>
+                        <p class="graphTitle">CAFFEINE</p>
+                        <p class="graphDetail">(per serving)</p>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div id="cal1"></div>
+                        <p class="graphData">137</p>
+                        <p class="graphTitle">CALORIES</p>
+                        <p class="graphDetail">(per serving)</p>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div id="price1"></div>
                         <p class="graphData">137</p>
                         <p class="graphTitle">PRICE</p>
                         <p class="graphDetail">($USD per cup)</p>
@@ -298,8 +326,31 @@
                     </div>
                 </div>
                 
+                <!-- Orig charts-->
+                <div class="row">
+                    
+                    <div id="caf0" class="col-sm-4">
+                    </div>
+                    <div id="cal0" class="col-sm-4">
+                    </div>
+                    <div id="price0" class="col-sm-4">
+                    </div>
+                </div>
+                
+                <!-- New charts-->
+                <div class="row">
+                    
+                    <div id="caf1" class="col-sm-4">
+                    </div>
+                    <div id="cal1" class="col-sm-4">
+                    </div>
+                    <div id="price1" class="col-sm-4">
+                    </div>
+                </div>
+                
                 <!-- Name and extra info-->
                 <div class="row"></div>
+
                 
             </div> <!-- End Results Side-->
             
@@ -308,9 +359,9 @@
         
         <!-- Load json data -->
         <script src="js/coffeedata.json"></script>
-
-        <!-- Load Chart visualization file -->
-        <script src="js/charts.js"></script>
+                
+        <!-- Donut Chart -->
+        <script src="js/donut.js"></script>
         
         <!-- Load main js file -->
         <script src="js/coffee.js"></script>

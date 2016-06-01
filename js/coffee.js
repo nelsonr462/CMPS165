@@ -4,7 +4,15 @@ var t_calories
 var t_flavor
 var t_price
 
+<<<<<<< Updated upstream
 var cupClickFlag = false
+=======
+var max_caffeine = 243
+var max_calories = 259
+var max_price = 1.0616659
+
+var mainCupFlag;
+>>>>>>> Stashed changes
 
 var coffeeFlag = "coffee1"
 
@@ -93,7 +101,7 @@ $(".bean").click(function(){
     calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
     
     // Update animation accordingly
-    setAnimation(t_caffeine, t_calories, t_price)
+    coffeeFlag == "coffee1" ? updateOrig() : updateNew()
     
     
 })
@@ -117,8 +125,11 @@ $(".method").click(function(){
     // Calculate new coffee results based on changed attribute
     calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
     
+    
+    
     // Update animation accordingly
-    setAnimation(t_caffeine, t_calories, t_price)
+    coffeeFlag == "coffee1" ? updateOrig() : updateNew()
+    
 })
 
 
@@ -139,7 +150,7 @@ $(".roast").click(function(){
     calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
     
     // Update animation accordingly
-    setAnimation(t_caffeine, t_calories, t_price)
+    coffeeFlag == "coffee1" ? updateOrig() : updateNew()
 })
 
 
@@ -160,7 +171,7 @@ $(".milk").click(function(){
     calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
     
     // Update animation accordingly
-    setAnimation(t_caffeine, t_calories, t_price)
+    coffeeFlag == "coffee1" ? updateOrig() : updateNew()
 })
 
 
@@ -181,7 +192,7 @@ $(".sweetener").click(function(){
     calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
     
     // Update animation accordingly
-    setAnimation(t_caffeine, t_calories, t_price)
+    coffeeFlag == "coffee1" ? updateOrig() : updateNew()
 })
 
 
@@ -229,7 +240,8 @@ $("#dropList").on("click", "li", function(){
             if (coffeeFlag == "coffee1") { calc(coffee1) }
             else { calc(coffee2) }
             calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
-            setAnimation(t_caffeine, t_calories, t_price)
+            coffeeFlag == "coffee1" ? updateOrig() : updateNew()
+            
         }
     }    
 })
@@ -269,7 +281,33 @@ function setOptions(obj) {
     $("#Syrup").fadeTo(250, (obj.sweetener == "Syrup" ? 1 : .5))
     }
 
+<<<<<<< Updated upstream
 
+=======
+function updateOrig() {
+    caffeine_0.load({
+        columns: [['data', t_caffeine/max_caffeine*100]]
+    });
+    calories_0.load({
+        columns: [['data', t_calories/max_calories*100]]
+    });
+    price_0.load({
+        columns: [['data', t_price/max_price*100]]
+    });
+}
+
+function updateNew() {
+    caffeine_1.load({
+        columns: [['data', t_caffeine/max_caffeine*100]]
+    });
+    calories_1.load({
+        columns: [['data', t_calories/max_calories*100]]
+    });
+    price_1.load({
+        columns: [['data', t_price/max_price*100]]
+    });
+}
+>>>>>>> Stashed changes
 
 // Add element to dropdown list
 function dropdownAdd(name) {
@@ -510,7 +548,7 @@ function calc(coffeeVal) {
 // Display inital animation
 setOptions(coffeeFlag == "coffee1" ? coffee1 : coffee2)
 calc(coffeeFlag == "coffee1" ? coffee1 : coffee2)
-setAnimation(t_caffeine, t_calories, t_price)
+updateOrig()
 
 // Fix Scrollbar lag
 $(".mCustomScrollbar").mCustomScrollbar({
