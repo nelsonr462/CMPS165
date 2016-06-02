@@ -1,4 +1,3 @@
-
 var caffeine_0 = c3.generate({
     bindto: '#caf0',
     data: {
@@ -17,8 +16,8 @@ var caffeine_0 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF0000'],
@@ -49,8 +48,8 @@ var caffeine_1 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF8300'],
@@ -81,8 +80,8 @@ var calories_0 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF0000'],
@@ -113,8 +112,8 @@ var calories_1 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF8300'],
@@ -145,8 +144,8 @@ var price_0 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF0000'],
@@ -177,8 +176,8 @@ var price_1 = c3.generate({
             },
             show: false
         },
-    units: ' mg',
-    width: 39
+        units: ' mg',
+        width: 39
     },
     color: {
         pattern: ['#FF8300'],

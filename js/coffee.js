@@ -498,9 +498,10 @@ function calc(coffeeObj) {
     t_flavor = bean_flavor + method_flavor + roast_flavor + milk_flavor + sweetener_flavor
     
     // Update Graph Labels
-    var caffeineLabel = $(".graphData")[0]
-    var calorieLabel = $(".graphData")[1]
-    var priceLabel = $(".graphData")[2]
+    var caffeineLabel = $(".graphData")[(coffeeFlag=="coffee1"?0:3)]
+    var calorieLabel = $(".graphData")[(coffeeFlag=="coffee1"?1:4)]
+    var priceLabel = $(".graphData")[(coffeeFlag=="coffee1"?2:5)]
+    
     
     $(caffeineLabel).text(Math.round(t_caffeine * 100) / 100 + " mg")
     $(calorieLabel).text(Math.round(t_calories * 100) / 100)
@@ -516,9 +517,10 @@ calc(coffeeSet1)
 updateOrig()
 
 // Create base coffee2 animation
+coffeeFlag="coffee2"
 calc(coffeeSet2)
 updateNew()
-
+coffeeFlag="coffee1"
 
 // Fix Scrollbar lag
 $(".mCustomScrollbar").mCustomScrollbar({
