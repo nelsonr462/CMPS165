@@ -35,24 +35,20 @@
 }
 
 .main .bean {
-    width:150px;
-    height:180px;
+    width: 8em;
+    height: 9em;
     padding: 20px 40px 0px 40px;
 }
 
-.arabica{
-    width:150px;
-    height:180px;
-    padding: 55px 30px 45px 40px;
-}
+
 
 .main .roast {
     width: 70%;
 }
 
 .main .milk {
-    width:150px;
-    height:180px;
+    width:8em;
+    height:9em;
     padding: 40px;
 }
 
@@ -63,8 +59,8 @@
 }
 
 .main .sweetener {
-    width:150px;
-    height:180px;
+    width:8em;
+    height:9em;
     padding: 40px;
 }
 
@@ -73,7 +69,7 @@
 }
 
 .main .dropdown {
-    margin: 20px;
+    margin: 0px;
     cursor: pointer !important;
 
 }
@@ -119,21 +115,22 @@ li:hover {
 }
 
 .siphen{
-    width: 137px;
-    height: 180px;
     padding: 40px;
 }
 
 .coldbrew{
-    width: 143px;
-    height: 180px;
     padding: 40px;
 }
 
 .chemex{
-    width: 141px;
-    height: 180px;
     padding: 55px 40px 45px 40px;
+}
+
+.method {
+    width: 8.5em !important;
+    height: 10em !important;
+    
+    
 }
 
 .image {
@@ -162,6 +159,7 @@ li:hover {
     width: auto;
     height: 60%;
     position: relative;
+    filter:grayscale(100);
 }
 
 .resultSide {
@@ -172,6 +170,13 @@ li:hover {
     padding-top: 15vh;
     overflow-y: auto;
 }
+
+.compareCupSide {
+    opacity: 0.2
+}
+
+
+
 .modSide {
     background-color: #CCCCCC;
     height: 100vh;
@@ -189,7 +194,7 @@ li:hover {
 /* GRAPHS */
 
 .graphs {
-    padding-bottom: 80px!important
+    padding-bottom: 35px!important
 }
 
 .graphData {
@@ -255,3 +260,11 @@ li:hover {
     list-style-type: none;
 }
 
+/* Button Text */
+.btn:hover{ 
+    color: white !important;
+}
+
+.btn:focus{
+    color: white !important;
+}

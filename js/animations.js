@@ -26,3 +26,8 @@ $("#compare").click(function () {
     this.toggle = !this.toggle;
     $(".compareCup").stop().fadeTo(400, this.toggle ? .25 : 0);
 });
+
+
+$(".compareCupSide").click(function() {
+    $(".compareCupSide").css("opacity", 1)
+})

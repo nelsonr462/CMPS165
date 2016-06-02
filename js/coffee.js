@@ -125,7 +125,7 @@ $(".method").click(function(){
 //        .attr("src", "static/img/cups/espressoCup.svg")
     
     // Calculate new coffee results based on changed attribute
-    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet1)
+    calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
     
     
     
@@ -296,6 +296,8 @@ function updateOrig() {
     price_0.load({
         columns: [['data', t_price/max_price*100]]
     });
+    console.log("updatedOrig")
+    console.log(coffeeSet1)
 }
 
 function updateNew() {
@@ -308,6 +310,8 @@ function updateNew() {
     price_1.load({
         columns: [['data', t_price/max_price*100]]
     });
+    console.log("updatedNew")
+    console.log(coffeeSet2)
 }
 
 // Add element to dropdown list
