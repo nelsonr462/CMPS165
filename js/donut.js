@@ -1,3 +1,7 @@
+var width = 20
+var height = 82
+
+
 var caffeine_0 = c3.generate({
     bindto: '#caf0',
     data: {
@@ -17,7 +21,7 @@ var caffeine_0 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF0000'],
@@ -26,7 +30,7 @@ var caffeine_0 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });
 
@@ -49,7 +53,7 @@ var caffeine_1 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF8300'],
@@ -58,7 +62,7 @@ var caffeine_1 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });
 
@@ -81,7 +85,7 @@ var calories_0 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF0000'],
@@ -90,7 +94,7 @@ var calories_0 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });
 
@@ -113,7 +117,7 @@ var calories_1 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF8300'],
@@ -122,7 +126,7 @@ var calories_1 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });
 
@@ -145,7 +149,7 @@ var price_0 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF0000'],
@@ -154,7 +158,7 @@ var price_0 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });
 
@@ -177,7 +181,7 @@ var price_1 = c3.generate({
             show: false
         },
         units: ' mg',
-        width: 39
+        width: width
     },
     color: {
         pattern: ['#FF8300'],
@@ -186,6 +190,6 @@ var price_1 = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: height
     }
 });

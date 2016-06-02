@@ -69,13 +69,17 @@
 }
 
 .main .save {
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
 .main .dropdown {
     margin: 20px;
     cursor: pointer !important;
 
+}
+
+.main .row {
+    margin: 0 !important;
 }
 
 .dropList {
@@ -144,15 +148,17 @@ li:hover {
 }
 
 .mainCup {
-    left: 7%;
+    top: 0%;
+    left: 0%;
     width: auto;
     height: 60%;
     position: relative;
 }
 
 .compareCup {
-    opacity: 0;
-    right: -8.3%;
+    opacity: 1;
+    top: 0%;
+    left: 0%;
     width: auto;
     height: 60%;
     position: relative;
@@ -187,7 +193,8 @@ li:hover {
 }
 
 .graphData {
-    margin-top: -70px !important;
+    font-size: 0.8em
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
@@ -197,7 +204,7 @@ li:hover {
 }
 
 .graphTitle {
-    
+    font-size: 0.75em;
 }
 
 .ct-label {

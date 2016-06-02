@@ -5,7 +5,7 @@ var t_flavor
 var t_price
 
 
-var cupClickFlag = false
+var cupClickFlag = true
 
 var max_caffeine = 243
 var max_calories = 259
@@ -61,6 +61,7 @@ $(".compareCup").click(function () {
     }
     
 })
+
 $(".mainCup").click(function () {
     if(cupClickFlag) {
         coffeeFlag = "coffee1"
@@ -70,16 +71,16 @@ $(".mainCup").click(function () {
     }
 })
 
-$("#compare").click(function () {
-    cupClickFlag = !cupClickFlag
-    if(coffeeFlag == "coffee2") {
-        setOptions(coffeeSet1)
-        coffeeFlag="coffee1"
-        $(".compareCup").fadeTo(250, .25)
-        $(".mainCup").fadeTo(250, 1)
-    }
+// $("#compare").click(function () {
+//     cupClickFlag = !cupClickFlag
+//     if(coffeeFlag == "coffee2") {
+//         setOptions(coffeeSet1)
+//         coffeeFlag="coffee1"
+//         $(".compareCup").fadeTo(250, .25)
+//         $(".mainCup").fadeTo(250, 1)
+//     }
     
-})
+// })
 
 
 //-----------------BEANS-----------------------

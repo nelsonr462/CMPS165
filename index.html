@@ -235,71 +235,93 @@
             
             <!-- Begin Results Side-->
             <div class="col-sm-6 resultSide">
-                
-                <!-- Orig Graphs -->
-                <div class="row graphs">
-                    <div class="resultTitle">
-                        <p>YOUR COFFEE</p>
-                    </div>
-                
-                    <div class="col-sm-4">
-                        <div id="caf0"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">CAFFEINE</p>
-                        <p class="graphDetail">(per serving)</p>
+                <div class="resultTitle">
+                    <p>YOUR COFFEE</p>
+                </div>
+                <!-- Main Cup Side -->
+                <div class="col-sm-6">
+                    <!-- Orig Graphs -->
+                    <div class="row graphs">
+                        
+                    
+                        <div class="col-sm-4">
+                            <div id="caf0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CAFFEINE</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="cal0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CALORIES</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="price0"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">PRICE</p>
+                            <p class="graphDetail">($USD per cup)</p>
+                        </div>
                     </div>
                     
-                    <div class="col-sm-4">
-                        <div id="cal0"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">CALORIES</p>
-                        <p class="graphDetail">(per serving)</p>
+                    <!-- Coffee Cup-->
+                    <div class="row">
+                        <div class="col-sm-12 cupHolder">
+                            <img id="leftCup" src="static/img/glass-coffee-mug.png"
+                                class="mainCup">
+                        </div>
+                        
                     </div>
                     
-                    <div class="col-sm-4">
-                        <div id="price0"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">PRICE</p>
-                        <p class="graphDetail">($USD per cup)</p>
-                    </div>
                 </div>
                 
-                <!-- New Graph -->
-                <div class="row graphs">
                 
-                    <div class="col-sm-4">
-                        <div id="caf1"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">CAFFEINE</p>
-                        <p class="graphDetail">(per serving)</p>
+                <!-- Compare Cup Side -->
+                <div class="col-sm-6">
+                    <!-- New Graph -->
+                    <div class="row graphs">
+                    
+                        <div class="col-sm-4">
+                            <div id="caf1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CAFFEINE</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="cal1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">CALORIES</p>
+                            <p class="graphDetail">(per serving)</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <div id="price1"></div>
+                            <p class="graphData"></p>
+                            <p class="graphTitle">PRICE</p>
+                            <p class="graphDetail">($USD per cup)</p>
+                        </div>
                     </div>
                     
-                    <div class="col-sm-4">
-                        <div id="cal1"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">CALORIES</p>
-                        <p class="graphDetail">(per serving)</p>
+                    <!-- Coffee Cup-->
+                    <div class="row">
+                        <div class="col-sm-12 cupHolder">
+                            <img id="leftCup" src="static/img/glass-coffee-mug.png"
+                                class="compareCup">
+                        </div>
+                        
                     </div>
                     
-                    <div class="col-sm-4">
-                        <div id="price1"></div>
-                        <p class="graphData"></p>
-                        <p class="graphTitle">PRICE</p>
-                        <p class="graphDetail">($USD per cup)</p>
-                    </div>
                 </div>
+                
+                
+                
+                
                 
 
-                <!-- Coffee Cup-->
-                <div class="row">
-                    <div class="col-sm-12 cupHolder">
-                        <img id="leftCup" src="static/img/glass-coffee-mug.png"
-                            class="mainCup">
-                        <img id="rightCup"  src="static/img/glass-coffee-mug.png"
-                            class="compareCup">
-                    </div>
-                    <button id="compare" type="button" class="btn btn-primary" >Compare Cups</button>
-                </div>
+                
                 
                 <!-- Name and extra info-->
                 <div class="row"></div>
@@ -308,13 +330,18 @@
                 <div class="row">
                     
                     <!-- Save coffee button -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <button type="button" class="btn btn-primary save">Save this cup!</button>
                         <input type="text" id="txt"/>
                     </div>
                     
+                    <div class="col-sm-4">
+                        <button id="compare" type="button" class="btn btn-primary">Compare Cups</button>
+                    </div>
+                    
+                    
                     <!-- Drop down of saved coffee objects -->
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Saved Coffee
                             <span class="caret"></span></button>
