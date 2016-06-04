@@ -14,6 +14,7 @@ var max_price = 1.0616659
 var mainCupFlag;
 
 var coffeeFlag = "coffee1"
+var isAnimating = false
 
 // List of saved coffee
 var coffeeList = []
@@ -58,6 +59,7 @@ $(".compareCup").click(function() {
         setOptions(coffeeSet2)
         $(".compareCup").fadeTo(250, 1)
         $(".mainCup").fadeTo(250, .25)
+        $(".mainFill").fadeTo(250, .25)
     }
 
 })
@@ -68,6 +70,7 @@ $(".mainCup").click(function() {
         setOptions(coffeeSet1)
         $(".compareCup").fadeTo(250, .25)
         $(".mainCup").fadeTo(250, 1)
+        $(".mainFill").fadeTo(250, 1)
     }
 })
 
@@ -356,60 +359,76 @@ function dropdownAdd(name) {
 
 function updateCup(data) {
     var cup = (coffeeFlag == "coffee1" ? ".mainCup" : ".compareCup")
+    var fill = (coffeeFlag == "coffee1" ? ".mainFill" : ".compareFill")
 
     if(data == "Chemex" || data =="Siphon") {
         if( $(cup).attr("src")=="static/img/cups/siphonCup.svg") return
-        
-        $(cup).css({'background-image': 'static/img/cups/siphonCup.svg'})
-        $(cup).animate({
-            opacity: 0
-        }, 300, "linear", function() {
-            $(cup).attr("src", "static/img/cups/siphonCup.svg")
-            $(cup).css({
-                height: "60%",
-                top: "0%",
-                left: "37.5%"
-            })
-            $(cup).animate({
-                opacity: 1
-            }, 300, "linear")
-        })
+        animateResult(cup, 0, fill)
+
 
     } else if(data == ("ColdBrew")) {
         if( $(cup).attr("src")=="static/img/cups/coldbrewCup.svg") return
-        
-        $(cup).css({'background-image': 'static/img/cups/coldbrewCup.svg'})
-        $(cup).animate({
-            opacity: 0
-        }, 300, "linear", function() {
-            $(cup).attr("src", "static/img/cups/coldbrewCup.svg")
-            $(cup).css({
-                height: "60%",
-                top: "0%",
-                left: "38.3%"
-            })
-            $(cup).animate({
-                opacity: 1
-            }, 300, "linear")
-        })
+        animateResult(cup, 1, fill)
         
         
     } else if(data == "Espresso" || data == "Turkish") {
         if( $(cup).attr("src")=="static/img/cups/espressoCup.svg") return
+        animateResult(cup, 2, fill)
         
-        $(cup).css({'background-image': 'static/img/cups/espressoCup.svg'})
+    }
+    
+    
+    function animateResult(cup, methodType, fill) {
+        console.log("FILL:  "+fill)
+        isAnimating = true
+        var fillHeight = ["6.43em", "7em", "2.46em"]
+        var fillLeft = ["8.69em", "8.69em", "9.53em"]
+        var fillBottom = ["6.0em", "6.0em", "6.54em"]
+        var fillURL = ["static/img/cups/siphonFill.svg", "static/img/cups/coldbrewFill.svg", "static/img/cups/espressoFill.svg"]
+    
+        var cupHeight = ["9em", "9.5em", "3.8em"]
+        var cupTop = ["1em", "0.5em", "5.5em"]
+        var cupLeft = ["8.25em", "8.25em", "9.15em"]
+        var cupURL = ["static/img/cups/siphonCup.svg", "static/img/cups/coldbrewCup.svg", "static/img/cups/espressoCup.svg"]
+    
+        var attIndex = methodType
+    
+    
+        // Fade away Fill
+        $(fill).animate({
+            opacity: 0
+        }, 250, "linear", function() {
+            $(fill).attr("src", fillURL[attIndex])
+        })
+    
         $(cup).animate({
-            opacity: 0,
-            height: "25%",
-            top: "35%",
-            left: "42%"
+            opacity: 0
         }, 300, "linear", function() {
-            $(cup).attr("src", "static/img/cups/espressoCup.svg")
+            $(fill).css("height", "0em")
+            $(cup).attr("src", cupURL[attIndex])
+            $(cup).css({
+                height: cupHeight[attIndex],
+                top: cupTop[attIndex],
+                left: cupLeft[attIndex]
+            })
+    
             $(cup).animate({
                 opacity: 1
-            }, 300, "linear")
+            }, 300, "linear", function() {
+                $(fill).css({
+                    bottom: fillBottom[attIndex],
+                    left: fillLeft[attIndex]
+                })
+                $(fill).animate({
+                    opacity: 1,
+                    height: fillHeight[attIndex]
+                }, 200, "swing", function() {
+                    isAnimating = false
+                })
+            })
+    
         })
-    }    
+    }
 }
 
 
@@ -606,8 +625,8 @@ updateCup(coffeeSet1.method)
 // Create base coffee2 animation
 coffeeFlag = "coffee2"
 calc(coffeeSet2)
-updateCup(coffeeSet2.method)
 updateNew()
+updateCup(coffeeSet2.method)
 coffeeFlag = "coffee1"
 
 // Fix Scrollbar lag
@@ -615,15 +634,19 @@ $(".mCustomScrollbar").mCustomScrollbar({
     scrollInertia: 1
 });
 
+
+
+
+
 // Info Button
 $(".infoButton").click(function() {
     swal({
     title: "WHAT IS THIS?",
     text: "Here, you'll be able to see what \
-        goes into a cup and how it changes what you get when\
+        goes into a cup and how it changes when\
         your coffee is made at home with the brew methods shown here.<br><br>\
         Simply select what you want to go into the first cup by clicking\
-        options on the left. To compare to cups, click the cup to change what\
+        options on the left. To compare to cups, click the other cup to change what\
         goes into it.\
         \n \n \
         <p style='font-size: 0.7em; padding-top: 1em'>Credit: Nelson Ramirez, Alex Janakos, Jenny Kwok</p>\

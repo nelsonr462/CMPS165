@@ -155,18 +155,26 @@
 }
 
 .mainCup {
-    left: 37.5%;
     width: auto;
-    height: 60%;
     position: absolute;
+}
+
+.mainFill {
+    height: 0em;
+    position: absolute;
+    pointer-events: none;
 }
 
 .compareCup {
     opacity: 1;
-    left: 50%;
     width: auto;
-    height: 60%;
     position: absolute;
+}
+
+.compareFill {
+    height: 0em;
+    position: absolute;
+    pointer-events: none;
 }
 
 .resultSide {
