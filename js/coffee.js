@@ -58,6 +58,7 @@ $(".compareCup").click(function() {
         coffeeFlag = "coffee2"
         setOptions(coffeeSet2)
         $(".compareCup").fadeTo(250, 1)
+        $(".compareFill").fadeTo(250, 1)
         $(".mainCup").fadeTo(250, .25)
         $(".mainFill").fadeTo(250, .25)
     }
@@ -69,6 +70,7 @@ $(".mainCup").click(function() {
         coffeeFlag = "coffee1"
         setOptions(coffeeSet1)
         $(".compareCup").fadeTo(250, .25)
+        $(".compareFill").fadeTo(250, .25)
         $(".mainCup").fadeTo(250, 1)
         $(".mainFill").fadeTo(250, 1)
     }
