@@ -9,7 +9,7 @@ var cupClickFlag = true
 
 var max_caffeine = 243
 var max_calories = 259
-var max_price = 1.0616659
+var max_price = 1.57745779568
 
 var mainCupFlag;
 
@@ -321,7 +321,7 @@ function updateOrig() {
             ['data', t_price / max_price * 100]
         ]
     });
-    console.log("updatedOrig")
+    console.log(t_price)
     console.log(coffeeSet1)
 }
 
@@ -341,7 +341,6 @@ function updateNew() {
             ['data', t_price / max_price * 100]
         ]
     });
-    console.log("updatedNew")
     console.log(coffeeSet2)
 }
 
@@ -387,7 +386,6 @@ function updateCup(data) {
     
     
     function animateResult(cup, methodType, fill) {
-        console.log("FILL:  "+fill)
         isAnimating = true
         var fillHeight = ["6.43em", "7em", "2.46em"]
         var fillLeft = ["40%", "40%", "9.53em"]

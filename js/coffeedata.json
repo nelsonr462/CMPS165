@@ -13,14 +13,14 @@ var data =
       "name": "Arabica",
       "base_caffeine_scalar": 1.0,
       "bean_flavor": -.025,
-      "bean_price": 0.0030503
+      "bean_price": 0.01278222256
     },
     
     {
       "name": "Robusta",
       "base_caffeine_scalar": 1.62,
       "bean_flavor": -.05,
-      "bean_price": 0.0017974
+      "bean_price": 0.00735272632
     }
     
   ],
