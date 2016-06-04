@@ -1,11 +1,16 @@
 /* Navbar stuff*/
 
+.navbar-header {
+    width: 100%;
+}
+
 .mainTitle {
     background-color: #764F1F !important;
     border: 0 !important;
     font-family: Montserrat;
     color: #FFFFFF;
     padding: 10px 10px 10px 10px;
+    text-align: center;
 }
 
 .mainTitle .titleText {
@@ -15,7 +20,7 @@
 
 .mainTitle .titleDetail {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 1em;
 }
 
 
@@ -87,7 +92,7 @@
     right: 15px;
 }
 
-li:hover {
+.dropdown li:hover {
     background-color: #DDDDDD !important;
 }
 
@@ -175,7 +180,15 @@ li:hover {
     opacity: 0.2
 }
 
+.mods {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
 
+.buttonRow {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
 
 .modSide {
     background-color: #CCCCCC;
@@ -267,4 +280,17 @@ li:hover {
 
 .btn:focus{
     color: white !important;
+}
+
+
+/* Text switcher */
+#swap {
+    vertical-align: top;
+    width: 0;
+    height: 1em;
+ /* needed. px, em or any other */;
+}
+
+#swap > span {
+    position: absolute;
 }

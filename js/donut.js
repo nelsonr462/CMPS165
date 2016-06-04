@@ -1,5 +1,5 @@
 var width = 20
-var height = 82
+var height = 75
 
 
 var caffeine_0 = c3.generate({

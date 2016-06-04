@@ -50,7 +50,7 @@
           <div class="container-fluid">
             <div class="navbar-header">
               <p class="titleText">WHAT'S IN YOUR CUP?</p>
-              <p class="titleDetail">See how changing the way your cup is made affects everything from how much of a kick you'll get, to how much it will cost!</p>
+              <p class="titleDetail">Make your cup <span id="swap"></span>!</p>
             </div>
           </div>
         </nav>
@@ -272,7 +272,7 @@
                     <!-- Coffee Cup-->
                     <div class="row">
                         <div class="col-sm-12 cupHolder">
-                            <img id="leftCup" src="static/img/glass-coffee-mug.png"
+                            <img src="static/img/glass-coffee-mug.png"
                                 class="mainCup">
                         </div>
                         
@@ -311,7 +311,7 @@
                     <!-- Coffee Cup-->
                     <div class="row">
                         <div class="col-sm-12 cupHolder">
-                            <img id="leftCup" src="static/img/glass-coffee-mug.png"
+                            <img src="static/img/glass-coffee-mug.png"
                                 class="compareCup">
                         </div>
                         
@@ -330,26 +330,28 @@
                 <div class="row"></div>
                 
                 <!-- Save coffee-->
-                <div class="row">
+                <div class="buttonRow row">
                     
                     <!-- Save coffee button -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
                         <button type="button" class="btn btn-primary save">Save this cup!</button>
                     </div>
                     
-                    <div class="col-sm-4">
-                        <button id="compare" type="button" class="btn btn-primary">Compare Cups</button>
-                    </div>
+                    <!--<div class="col-sm-4">-->
+                        <!--<button id="compare" type="button" class="btn btn-primary">Compare Cups</button>-->
+                    <!--</div>-->
                     
                     
                     <!-- Drop down of saved coffee objects -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Saved Coffee
                             <span class="caret"></span></button>
                             <ul id="dropList" class="dropdown-menu dropList"></ul>
                         </div>
                     </div>
+                    <div class="col-sm-3"></div>
                 </div>
                 
                 <!-- Name and extra info-->

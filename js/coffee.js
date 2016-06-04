@@ -202,8 +202,8 @@ $(".sweetener").click(function() {
 // Save current cup of coffee and add to coffeeList
 $(".save").click(function() {
     swal({
-        title: "An input!",
-        text: "Write something interesting:",
+        title: "Give your cup a name!",
+        text: "Write something unique:",
         type: "input",
         showCancelButton: true,
         closeOnConfirm: false,
