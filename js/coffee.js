@@ -120,9 +120,8 @@ $(".method").click(function() {
     $("#ColdBrew").fadeTo(250, ($(this).attr("data") == "ColdBrew" ? 1 : .25))
     $("#Espresso").fadeTo(250, ($(this).attr("data") == "Espresso" ? 1 : .25))
     $("#Turkish").fadeTo(250, ($(this).attr("data") == "Turkish" ? 1 : .25))
+    
 
-    //    $(coffeeFlag == "coffee1" ? "#leftCup" : "#rightCup")
-    //        .attr("src", "static/img/cups/espressoCup.svg")
 
     // Calculate new coffee results based on changed attribute
     calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
@@ -131,6 +130,9 @@ $(".method").click(function() {
 
     // Update animation accordingly
     coffeeFlag == "coffee1" ? updateOrig() : updateNew()
+    
+    // Update Cup
+    updateCup($(this).attr("data"))
 
 })
 
@@ -351,6 +353,67 @@ function dropdownAdd(name) {
     list.appendChild(li)
 }
 
+
+function updateCup(data) {
+    var cup = (coffeeFlag == "coffee1" ? ".mainCup" : ".compareCup")
+
+    if(data == "Chemex" || data =="Siphon") {
+        if( $(cup).attr("src")=="static/img/cups/siphonCup.svg") return
+        
+        $(cup).css({'background-image': 'static/img/cups/siphonCup.svg'})
+        $(cup).animate({
+            opacity: 0
+        }, 300, "linear", function() {
+            $(cup).attr("src", "static/img/cups/siphonCup.svg")
+            $(cup).css({
+                height: "60%",
+                top: "0%",
+                left: "37.5%"
+            })
+            $(cup).animate({
+                opacity: 1
+            }, 300, "linear")
+        })
+
+    } else if(data == ("ColdBrew")) {
+        if( $(cup).attr("src")=="static/img/cups/coldbrewCup.svg") return
+        
+        $(cup).css({'background-image': 'static/img/cups/coldbrewCup.svg'})
+        $(cup).animate({
+            opacity: 0
+        }, 300, "linear", function() {
+            $(cup).attr("src", "static/img/cups/coldbrewCup.svg")
+            $(cup).css({
+                height: "60%",
+                top: "0%",
+                left: "38.3%"
+            })
+            $(cup).animate({
+                opacity: 1
+            }, 300, "linear")
+        })
+        
+        
+    } else if(data == "Espresso" || data == "Turkish") {
+        if( $(cup).attr("src")=="static/img/cups/espressoCup.svg") return
+        
+        $(cup).css({'background-image': 'static/img/cups/espressoCup.svg'})
+        $(cup).animate({
+            opacity: 0,
+            height: "25%",
+            top: "35%",
+            left: "42%"
+        }, 300, "linear", function() {
+            $(cup).attr("src", "static/img/cups/espressoCup.svg")
+            $(cup).animate({
+                opacity: 1
+            }, 300, "linear")
+        })
+    }    
+}
+
+
+
 // add object to array
 function addObj(keyName, val) {
 
@@ -538,10 +601,12 @@ setOptions(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
 // Calc coffee1 and create initial animation
 calc(coffeeSet1)
 updateOrig()
+updateCup(coffeeSet1.method)
 
 // Create base coffee2 animation
 coffeeFlag = "coffee2"
 calc(coffeeSet2)
+updateCup(coffeeSet2.method)
 updateNew()
 coffeeFlag = "coffee1"
 
@@ -549,3 +614,21 @@ coffeeFlag = "coffee1"
 $(".mCustomScrollbar").mCustomScrollbar({
     scrollInertia: 1
 });
+
+// Info Button
+$(".infoButton").click(function() {
+    swal({
+    title: "WHAT IS THIS?",
+    text: "Here, you'll be able to see what \
+        goes into a cup and how it changes what you get when\
+        your coffee is made at home with the brew methods shown here.<br><br>\
+        Simply select what you want to go into the first cup by clicking\
+        options on the left. To compare to cups, click the cup to change what\
+        goes into it.\
+        \n \n \
+        <p style='font-size: 0.7em; padding-top: 1em'>Credit: Nelson Ramirez, Alex Janakos, Jenny Kwok</p>\
+        <p style='font-size: 0.7em; padding-top: 0.3em'><a href='google.com'>Sources<a></p>",
+    html: true
+    })
+    
+})

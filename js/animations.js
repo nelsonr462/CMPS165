@@ -33,7 +33,7 @@ $(".compareCupSide").click(function() {
 })
 
 
-var txt = ['strong', 'cheap', 'light', 'sweet', 'fancy', 'bitter', 'tasty'],
+var txt = ['strong', 'cheap', 'light', 'sweet', 'fancy', 'bitter', 'tasty', 'healthy'],
     n = txt.length,
     $swap = $('#swap'),
     $span,
