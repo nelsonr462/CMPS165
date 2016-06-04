@@ -76,17 +76,6 @@ $(".mainCup").click(function() {
     }
 })
 
-// $("#compare").click(function () {
-//     cupClickFlag = !cupClickFlag
-//     if(coffeeFlag == "coffee2") {
-//         setOptions(coffeeSet1)
-//         coffeeFlag="coffee1"
-//         $(".compareCup").fadeTo(250, .25)
-//         $(".mainCup").fadeTo(250, 1)
-//     }
-
-// })
-
 
 //-----------------BEANS-----------------------
 
@@ -166,15 +155,24 @@ $(".roast").click(function() {
 //-----------------------------MILK------------------------------
 // Set milk
 $(".milk").click(function() {
+    var currentSet = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
 
-    // Set coffee attribute
-    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).milk = $(this).attr('data')
-        //console.log(coffee.milk)
+    if( currentSet.milk == $(this).attr('data')) {
+        currentSet.milk = "NoMilk"
+        $("#CowMilk").fadeTo(250, .25)
+        $("#AlmondMilk").fadeTo(250, .25)
+        $("#SoyMilk").fadeTo(250, .25)
+    } else {
 
-    // Set options
-    $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .25))
-    $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .25))
-    $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .25))
+        // Set coffee attribute    
+        currentSet.milk = $(this).attr('data')
+    
+        // Set options
+        $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .25))
+        $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .25))
+        $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .25))
+    
+    }
 
     // Calculate new coffee results based on changed attribute
     calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
@@ -187,15 +185,23 @@ $(".milk").click(function() {
 //--------------------------SWEETENER----------------------------------
 // Set sweetener
 $(".sweetener").click(function() {
+    var currentSet = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
+    if( currentSet.sweetener == $(this).attr('data')) {
+        currentSet.sweetener = "NoSweet"
+        $("#Sugar").fadeTo(250, .25)
+        $("#Honey").fadeTo(250, .25)
+        $("#Syrup").fadeTo(250, .25)
+    } else {
 
-    // Set coffee attribute    
-    (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).sweetener = $(this).attr('data')
-        //console.log(coffee.sweetener)
-
-    // Set options
-    $("#Sugar").fadeTo(250, ($(this).attr("data") == "Sugar" ? 1 : .25))
-    $("#Honey").fadeTo(250, ($(this).attr("data") == "Honey" ? 1 : .25))
-    $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .25))
+        // Set coffee attribute    
+        currentSet.sweetener = $(this).attr('data')
+    
+        // Set options
+        $("#Sugar").fadeTo(250, ($(this).attr("data") == "Sugar" ? 1 : .25))
+        $("#Honey").fadeTo(250, ($(this).attr("data") == "Honey" ? 1 : .25))
+        $("#Syrup").fadeTo(250, ($(this).attr("data") == "Syrup" ? 1 : .25))
+    
+    }
 
     // Calculate new coffee results based on changed attribute
     calc(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
@@ -265,7 +271,7 @@ $("#dropList").on("click", "li", function() {
             }
         }
     })
-    //=====================END ONCLICK LISTENERS==========================
+//=====================END ONCLICK LISTENERS==========================
 
 
 // Set all options at once
@@ -358,7 +364,7 @@ function dropdownAdd(name) {
     list.appendChild(li)
 }
 
-
+// Choose correct images to display and animate change
 function updateCup(data) {
     var cup = (coffeeFlag == "coffee1" ? ".mainCup" : ".compareCup")
     var fill = (coffeeFlag == "coffee1" ? ".mainFill" : ".compareFill")
@@ -384,13 +390,13 @@ function updateCup(data) {
         console.log("FILL:  "+fill)
         isAnimating = true
         var fillHeight = ["6.43em", "7em", "2.46em"]
-        var fillLeft = ["8.69em", "8.69em", "9.53em"]
+        var fillLeft = ["40%", "40%", "9.53em"]
         var fillBottom = ["6.0em", "6.0em", "6.54em"]
         var fillURL = ["static/img/cups/siphonFill.svg", "static/img/cups/coldbrewFill.svg", "static/img/cups/espressoFill.svg"]
     
         var cupHeight = ["9em", "9.5em", "3.8em"]
         var cupTop = ["1em", "0.5em", "5.5em"]
-        var cupLeft = ["8.25em", "8.25em", "9.15em"]
+        var cupLeft = ["38%", "38%", "9.15em"]
         var cupURL = ["static/img/cups/siphonCup.svg", "static/img/cups/coldbrewCup.svg", "static/img/cups/espressoCup.svg"]
     
         var attIndex = methodType

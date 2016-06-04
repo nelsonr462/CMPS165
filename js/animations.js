@@ -29,7 +29,9 @@ $("#compare").click(function() {
 
 
 $(".compareCupSide").click(function() {
-    $(".compareCupSide").css("opacity", 1)
+    $(".compareCupSide").fadeTo(250, 1)
+    $(".compareCupSide").off("click")
+
 })
 
 

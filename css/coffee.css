@@ -157,6 +157,7 @@
 .mainCup {
     width: auto;
     position: absolute;
+    cursor: pointer
 }
 
 .mainFill {
@@ -166,12 +167,14 @@
 }
 
 .compareCup {
-    opacity: 1;
+    opacity: 0.2;
     width: auto;
     position: absolute;
+    cursor: pointer
 }
 
 .compareFill {
+    opacity: 0.2;
     height: 0em;
     position: absolute;
     pointer-events: none;
@@ -187,7 +190,7 @@
 }
 
 .compareCupSide {
-    opacity: 0.2
+    opacity: 0.2;
 }
 
 .mods {
@@ -221,7 +224,7 @@
 }
 
 .graphData {
-    font-size: 0.8em
+    font-size: 0.8em;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
