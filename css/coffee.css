@@ -213,9 +213,14 @@
 
 .resultTitle {
     padding-top: 20px !important;
-    padding-bottom: 30px !important;
+    /*padding-bottom: 30px !important;*/
     font-size: 28px;
 }
+
+/*.resultTitle .titleDetail {*/
+/*    font-size: .45em !important;*/
+/*    padding: 0em 3em 0em 3em !important;*/
+/*}*/
 
 /* GRAPHS */
 
