@@ -164,6 +164,10 @@
     height: 0em;
     position: absolute;
     pointer-events: none;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: 1s -webkit-filter ease-out;
+
 }
 
 .compareCup {
@@ -178,7 +182,16 @@
     height: 0em;
     position: absolute;
     pointer-events: none;
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+    transition: 1s -webkit-filter ease-out;
 }
+
+.hasMilk {
+    -webkit-filter: brightness(125%);
+    filter: brightness(125%);
+}
+
 
 .resultSide {
     background-color: #CCCCCC;

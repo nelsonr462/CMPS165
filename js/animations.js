@@ -53,5 +53,5 @@ $span = $("span", $swap).hide();
     $swap.animate({
         width: $span.eq(c).width()
     });
-    $span.stop().fadeOut().eq(c).fadeIn().delay(1500).show(0, loop);
+    $span.stop().fadeOut().eq(c).fadeIn().delay(2000).show(0, loop);
 }());

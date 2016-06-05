@@ -156,12 +156,15 @@ $(".roast").click(function() {
 // Set milk
 $(".milk").click(function() {
     var currentSet = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
+    var fill = (coffeeFlag == "coffee1" ? ".mainFill" : "compareFill")
 
     if( currentSet.milk == $(this).attr('data')) {
         currentSet.milk = "NoMilk"
         $("#CowMilk").fadeTo(250, .25)
         $("#AlmondMilk").fadeTo(250, .25)
         $("#SoyMilk").fadeTo(250, .25)
+        $(fill).removeClass("hasMilk")
+
     } else {
 
         // Set coffee attribute    
@@ -171,6 +174,7 @@ $(".milk").click(function() {
         $("#CowMilk").fadeTo(250, ($(this).attr("data") == "CowMilk" ? 1 : .25))
         $("#AlmondMilk").fadeTo(250, ($(this).attr("data") == "AlmondMilk" ? 1 : .25))
         $("#SoyMilk").fadeTo(250, ($(this).attr("data") == "SoyMilk" ? 1 : .25))
+        $(fill).addClass("hasMilk") 
     
     }
 
@@ -386,7 +390,7 @@ function updateCup(data) {
     
     
     function animateResult(cup, methodType, fill) {
-        isAnimating = true
+        
         var fillHeight = ["6.43em", "7em", "2.46em"]
         var fillLeft = ["40%", "40%", "9.53em"]
         var fillBottom = ["6.0em", "6.0em", "6.54em"]
@@ -396,6 +400,7 @@ function updateCup(data) {
         var cupTop = ["1em", "0.5em", "5.5em"]
         var cupLeft = ["38%", "38%", "9.15em"]
         var cupURL = ["static/img/cups/siphonCup.svg", "static/img/cups/coldbrewCup.svg", "static/img/cups/espressoCup.svg"]
+        var currentMilk = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).milk
     
         var attIndex = methodType
     
@@ -429,7 +434,7 @@ function updateCup(data) {
                     opacity: 1,
                     height: fillHeight[attIndex]
                 }, 200, "swing", function() {
-                    isAnimating = false
+                    (currentMilk == "NoMilk" ? $(fill).removeClass("hasMilk") : $(fill).addClass("hasMilk"))
                 })
             })
     
