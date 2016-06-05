@@ -173,6 +173,7 @@
 }
 
 .mainIce {
+    pointer-events: none;
     opacity: 0;
     height: 25%;
     left: 41%;
@@ -199,6 +200,7 @@
 }
 
 .compareIce {
+    pointer-events: none;
     opacity: 0;
     height: 25%;
     left: 41%;

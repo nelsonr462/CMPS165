@@ -66,7 +66,7 @@ $(".compareCup").click(function() {
 })
 
 $(".mainCup").click(function() {
-    if (cupClickFlag) {
+    if ($(".compareCupSide").css("opacity") > .2) {
         coffeeFlag = "coffee1"
         setOptions(coffeeSet1)
         $(".compareCup").fadeTo(250, .25)
