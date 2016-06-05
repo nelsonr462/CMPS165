@@ -156,7 +156,7 @@ $(".roast").click(function() {
 // Set milk
 $(".milk").click(function() {
     var currentSet = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
-    var fill = (coffeeFlag == "coffee1" ? ".mainFill" : "compareFill")
+    var fill = (coffeeFlag == "coffee1" ? ".mainFill" : ".compareFill")
 
     if( currentSet.milk == $(this).attr('data')) {
         currentSet.milk = "NoMilk"
