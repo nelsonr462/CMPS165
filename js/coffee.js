@@ -400,12 +400,15 @@ function updateCup(data) {
         var cupTop = ["1em", "0.5em", "5.5em"]
         var cupLeft = ["38%", "38%", "9.15em"]
         var cupURL = ["static/img/cups/siphonCup.svg", "static/img/cups/coldbrewCup.svg", "static/img/cups/espressoCup.svg"]
+        
         var currentMilk = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).milk
+        var currentIce = (coffeeFlag == "coffee1" ? ".mainIce" : ".compareIce")
     
         var attIndex = methodType
     
     
         // Fade away Fill
+        if(methodType != 1) $(currentIce).fadeTo(100, 0)
         $(fill).animate({
             opacity: 0
         }, 250, "linear", function() {
@@ -435,6 +438,7 @@ function updateCup(data) {
                     height: fillHeight[attIndex]
                 }, 200, "swing", function() {
                     (currentMilk == "NoMilk" ? $(fill).removeClass("hasMilk") : $(fill).addClass("hasMilk"))
+                    if (methodType == 1) $(currentIce).fadeTo(200, 1)
                 })
             })
     

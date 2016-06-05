@@ -157,7 +157,8 @@
 .mainCup {
     width: auto;
     position: absolute;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 0;
 }
 
 .mainFill {
@@ -167,7 +168,17 @@
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
     transition: 1s -webkit-filter ease-out;
+    z-index: 1;
 
+}
+
+.mainIce {
+    opacity: 0;
+    height: 25%;
+    left: 41%;
+    top: 2em;
+    position: absolute;
+    z-index: 2;
 }
 
 .compareCup {
@@ -185,6 +196,15 @@
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
     transition: 1s -webkit-filter ease-out;
+}
+
+.compareIce {
+    opacity: 0;
+    height: 25%;
+    left: 41%;
+    top: 2em;
+    position: absolute;
+    z-index: 2;
 }
 
 .hasMilk {
