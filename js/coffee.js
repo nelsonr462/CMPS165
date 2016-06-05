@@ -391,14 +391,14 @@ function updateCup(data) {
     
     function animateResult(cup, methodType, fill) {
         
-        var fillHeight = ["6.43em", "7em", "2.46em"]
-        var fillLeft = ["40%", "40%", "9.53em"]
+        var fillHeight = ["6.43em", "7em", "2.45em"]
+        var fillLeft = ["37.8%", "36.8%", "6.48em"]
         var fillBottom = ["6.0em", "6.0em", "6.54em"]
         var fillURL = ["static/img/cups/siphonFill.svg", "static/img/cups/coldbrewFill.svg", "static/img/cups/espressoFill.svg"]
     
         var cupHeight = ["9em", "9.5em", "3.8em"]
         var cupTop = ["1em", "0.5em", "5.5em"]
-        var cupLeft = ["38%", "38%", "9.15em"]
+        var cupLeft = ["35%", "34%", "6.1em"]
         var cupURL = ["static/img/cups/siphonCup.svg", "static/img/cups/coldbrewCup.svg", "static/img/cups/espressoCup.svg"]
         
         var currentMilk = (coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2).milk

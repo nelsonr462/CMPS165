@@ -152,6 +152,9 @@
 .cupHolder {
     position: relative;
     height: 250px;
+    width: 250px;
+    margin: auto;
+    /*align-content: center;*/
 }
 
 .mainCup {
@@ -176,7 +179,7 @@
     pointer-events: none;
     opacity: 0;
     height: 25%;
-    left: 41%;
+    left: 38.7%;
     top: 2em;
     position: absolute;
     z-index: 2;
@@ -203,7 +206,7 @@
     pointer-events: none;
     opacity: 0;
     height: 25%;
-    left: 41%;
+    left: 38.7%;
     top: 2em;
     position: absolute;
     z-index: 2;
