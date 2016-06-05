@@ -69,10 +69,6 @@
     padding: 40px;
 }
 
-.main .save {
-    /*margin: 20px;*/
-}
-
 .main .dropdown {
     margin: 0px;
     cursor: pointer !important;
@@ -100,10 +96,6 @@
 .content {
     padding: 50px 10px 50px 10px;
 }
-
-/*.image {*/
-/*    padding-bottom:10px;*/
-/*}*/
 
 .itemLabel {
     margin: -15px auto auto auto;
@@ -140,7 +132,6 @@
     width: 8.5em !important;
     height: 10em !important;
     
-    
 }
 
 .image {
@@ -154,7 +145,6 @@
     height: 250px;
     width: 250px;
     margin: auto;
-    /*align-content: center;*/
 }
 
 .mainCup {
@@ -251,14 +241,8 @@
 
 .resultTitle {
     padding-top: 20px !important;
-    /*padding-bottom: 30px !important;*/
     font-size: 28px;
 }
-
-/*.resultTitle .titleDetail {*/
-/*    font-size: .45em !important;*/
-/*    padding: 0em 3em 0em 3em !important;*/
-/*}*/
 
 /* GRAPHS */
 
@@ -286,20 +270,6 @@
     font-family: Montserrat !important;
     font-style: bold !important;
 }
-
-/* GRAPH COLORS */
-
-/*.caffeine .ct-slice-donut {*/
-/*    stroke: #f4c63d !important;*/
-/*}*/
-
-/*.calories .ct-slice-donut {*/
-/*    stroke: #f4c63d !important;*/
-/*}*/
-
-/*.price .ct-slice-donut {*/
-/*    stroke: #f4c63d !important;*/
-/*}*/
 
 
 /* BUTTON */
@@ -350,6 +320,8 @@
 #swap > span {
     position: absolute;
 }
+
+/* INFO BUTTON */
 
 .infoButton {
     text-align: right;

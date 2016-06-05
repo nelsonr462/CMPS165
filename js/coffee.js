@@ -395,6 +395,7 @@ function updateCup(data) {
         var fillLeft = ["37.8%", "36.8%", "6.48em"]
         var fillBottom = ["6.0em", "6.0em", "6.54em"]
         var fillURL = ["static/img/cups/siphonFill.svg", "static/img/cups/coldbrewFill.svg", "static/img/cups/espressoFill.svg"]
+        var fillWidth = ["4.55em", "4.35em", "2.81em"]
     
         var cupHeight = ["9em", "9.5em", "3.8em"]
         var cupTop = ["1em", "0.5em", "5.5em"]
@@ -418,7 +419,10 @@ function updateCup(data) {
         $(cup).animate({
             opacity: 0
         }, 300, "linear", function() {
-            $(fill).css("height", "0em")
+            $(fill).css({
+                height: "0em",
+                width: fillWidth[methodType]
+            })
             $(cup).attr("src", cupURL[attIndex])
             $(cup).css({
                 height: cupHeight[attIndex],
@@ -665,7 +669,7 @@ $(".infoButton").click(function() {
         goes into it.\
         \n \n \
         <p style='font-size: 0.7em; padding-top: 1em'>Credit: Nelson Ramirez, Alex Janakos, Jenny Kwok</p>\
-        <p style='font-size: 0.7em; padding-top: 0.3em'><a href='google.com'>Sources<a></p>",
+        <p style='font-size: 0.7em; padding-top: 0.3em'><a href='README.md'>Sources<a></p>",
     html: true
     })
     
