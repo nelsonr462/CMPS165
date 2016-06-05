@@ -57,10 +57,12 @@ $(".compareCup").click(function() {
     if (cupClickFlag) {
         coffeeFlag = "coffee2"
         setOptions(coffeeSet2)
+        if($(".compareIce").css("opacity")==.2) $(".compareIce").css("opacity", 1)
         $(".compareCup").fadeTo(250, 1)
         $(".compareFill").fadeTo(250, 1)
         $(".mainCup").fadeTo(250, .25)
         $(".mainFill").fadeTo(250, .25)
+        if($(".mainIce").css("opacity")>.2) $(".mainIce").css("opacity", .2)
     }
 
 })
@@ -69,10 +71,13 @@ $(".mainCup").click(function() {
     if ($(".compareCupSide").css("opacity") > .2) {
         coffeeFlag = "coffee1"
         setOptions(coffeeSet1)
+        if($(".compareIce").css("opacity")>.2) $(".compareIce").css("opacity", .2)
         $(".compareCup").fadeTo(250, .25)
         $(".compareFill").fadeTo(250, .25)
         $(".mainCup").fadeTo(250, 1)
         $(".mainFill").fadeTo(250, 1)
+        if($(".mainIce").css("opacity")==.2) $(".mainIce").css("opacity", 1)
+        
     }
 })
 
@@ -272,6 +277,7 @@ $("#dropList").on("click", "li", function() {
                 setOptions(coffeeList[prop]["value"])
                 calc(coffeeList[prop]["value"])
                 coffeeFlag == "coffee1" ? updateOrig() : updateNew()
+                coffeeFlag == "coffee1" ? updateCup(coffeeSet1.method) : updateCup(coffeeSet2.method)
             }
         }
     })
@@ -407,9 +413,8 @@ function updateCup(data) {
     
         var attIndex = methodType
     
-    
         // Fade away Fill
-        if(methodType != 1) $(currentIce).fadeTo(100, 0)
+        if (methodType != 1) $(currentIce).fadeTo(100, 0)
         $(fill).animate({
             opacity: 0
         }, 250, "linear", function() {
@@ -433,17 +438,19 @@ function updateCup(data) {
             $(cup).animate({
                 opacity: 1
             }, 300, "linear", function() {
-                $(fill).css({
-                    bottom: fillBottom[attIndex],
-                    left: fillLeft[attIndex]
-                })
-                $(fill).animate({
-                    opacity: 1,
-                    height: fillHeight[attIndex]
-                }, 200, "swing", function() {
-                    (currentMilk == "NoMilk" ? $(fill).removeClass("hasMilk") : $(fill).addClass("hasMilk"))
-                    if (methodType == 1) $(currentIce).fadeTo(200, 1)
-                })
+    
+    
+            })
+            $(fill).css({
+                bottom: fillBottom[attIndex],
+                left: fillLeft[attIndex]
+            })
+            $(fill).animate({
+                opacity: 1,
+                height: fillHeight[attIndex]
+            }, 200, "swing", function() {
+                (currentMilk == "NoMilk" ? $(fill).removeClass("hasMilk") : $(fill).addClass("hasMilk"))
+                if (methodType == 1) $(currentIce).fadeTo(200, 1)
             })
     
         })
