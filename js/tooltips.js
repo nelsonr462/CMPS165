@@ -26,8 +26,8 @@ var milkOffset = 35
 var sweetArray = ["Sugar", "Honey", "Syrup"]
 var sweetOffset = 35
 
-var cupArray = ["compareCup", ""]
-var cupOffset = 35
+var cupArray = ["compareCup", "mainCup"]
+var cupOffset = -2
 
 // Fetch HTML file with formatted tooltips
 $.get("static/html/tipContent.html", function(data) {
@@ -117,7 +117,8 @@ $.get("static/html/tipContent.html", function(data) {
     
     $("[data='compareCup']").qtip(createTip("compareCup"))
     
-
+    $("[data='mainCup']").qtip(createTip("mainCup"))
+    
 
 }, 'text');
 
