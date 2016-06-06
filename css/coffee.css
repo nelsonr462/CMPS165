@@ -109,6 +109,7 @@
 
 .titleDetail {
     font-size: .8em;
+    font-weight: normal;
     padding: 0em 3em 0em 3em;
 }
 
@@ -291,6 +292,20 @@
   border-color: #5c3d16;
     color: white;
 }
+
+.btn-save {
+  background-color: #5c3d16;
+  border-color: #5c3d16;
+    color: white;
+}
+
+.btn-saved {
+  background-color: #b0742b;
+  border-color: #b0742b;
+    color: white;
+}
+
+
 
 /* TOOLTIP STYLING */
 
