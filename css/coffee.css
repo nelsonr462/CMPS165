@@ -295,9 +295,22 @@
 /* TOOLTIP STYLING */
 
 .tipInfo {
-    padding:  0px 15px 0px 0px;
-    list-style-type: none;
+    width: 15em;
 }
+
+l { 
+    float: left; 
+    text-align: right;
+    width:30%;
+    font-weight: bold;
+}
+
+r { 
+    float: right;
+    text-align: left;
+    width:65%;
+}
+
 
 /* Button Text */
 .btn:hover{ 
