@@ -26,6 +26,9 @@ var milkOffset = 35
 var sweetArray = ["Sugar", "Honey", "Syrup"]
 var sweetOffset = 35
 
+var cupArray = ["compareCup", ""]
+var cupOffset = 35
+
 // Fetch HTML file with formatted tooltips
 $.get("static/html/tipContent.html", function(data) {
     // Parse HTML data from GET Request
@@ -49,6 +52,8 @@ $.get("static/html/tipContent.html", function(data) {
             yOffset = milkOffset
         } else if($.inArray(tipType, sweetArray) > -1) {
             yOffset = sweetOffset
+        } else if($.inArray(tipType, cupArray) > -1) {
+            yOffset = cupOffset
         }
 
         // Create selector to find element in index.html
@@ -110,7 +115,8 @@ $.get("static/html/tipContent.html", function(data) {
     
     $("[data='Syrup']").qtip(createTip("Syrup"))
     
-
+    $("[data='compareCup']").qtip(createTip("compareCup"))
+    
 
 
 }, 'text');
