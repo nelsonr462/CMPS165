@@ -318,17 +318,17 @@ function setOptions(obj) {
 function updateOrig() {
     caffeine_0.load({
         columns: [
-            ['data', t_caffeine / max_caffeine * 100]
+            ['data', t_caffeine]
         ]
     });
     calories_0.load({
         columns: [
-            ['data', t_calories / max_calories * 100]
+            ['data', t_calories]
         ]
     });
     price_0.load({
         columns: [
-            ['data', t_price / max_price * 100]
+            ['data', t_price]
         ]
     });
     console.log(t_price)

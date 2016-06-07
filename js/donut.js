@@ -18,9 +18,10 @@ var caffeine_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 243,
         width: width
     },
     color: {
@@ -50,9 +51,10 @@ var caffeine_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 243,
         width: width
     },
     color: {
@@ -82,9 +84,10 @@ var calories_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 259,
         width: width
     },
     color: {
@@ -114,9 +117,10 @@ var calories_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 259,
         width: width
     },
     color: {
@@ -146,9 +150,10 @@ var price_0 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 1.58,
         width: width
     },
     color: {
@@ -178,9 +183,10 @@ var price_1 = c3.generate({
             format: function(value, ratio) {
                 return;
             },
-            show: false
+            show: true
         },
-        units: ' mg',
+        min: 0, 
+        max: 1.58,
         width: width
     },
     color: {
