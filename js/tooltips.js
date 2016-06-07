@@ -37,6 +37,8 @@ $.get("static/html/tipContent.html", function(data) {
     tipContent = tempData.html();
     // Y-Offset Holder
     var yOffset
+    var myPosition = "bottom-center"
+    var myAt = "top-center"
 
     
     // Create ToolTips and fill with content from tipContent.html
@@ -54,6 +56,8 @@ $.get("static/html/tipContent.html", function(data) {
             yOffset = sweetOffset
         } else if($.inArray(tipType, cupArray) > -1) {
             yOffset = cupOffset
+            myPosition=(tipType=="mainCup"?"left-center":"right-center")
+            myAt=(tipType=="mainCup"?"right-center":"left-center")
         }
 
         // Create selector to find element in index.html
@@ -67,8 +71,8 @@ $.get("static/html/tipContent.html", function(data) {
             },
 
             position: {
-                my: "bottom-center",
-                at: "top-center",
+                my: myPosition,
+                at: myAt,
                 target: $(selector),
                 adjust: {
                     y: yOffset
