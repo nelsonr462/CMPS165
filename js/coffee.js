@@ -338,17 +338,17 @@ function updateOrig() {
 function updateNew() {
     caffeine_1.load({
         columns: [
-            ['data', t_caffeine / max_caffeine * 100]
+            ['data', t_caffeine]
         ]
     });
     calories_1.load({
         columns: [
-            ['data', t_calories / max_calories * 100]
+            ['data', t_calories]
         ]
     });
     price_1.load({
         columns: [
-            ['data', t_price / max_price * 100]
+            ['data', t_price]
         ]
     });
     console.log(coffeeSet2)
@@ -381,17 +381,12 @@ function updateCup(data) {
     if(data == "Chemex" || data =="Siphon") {
         if( $(cup).attr("src")=="static/img/cups/siphonCup.svg") return
         animateResult(cup, 0, fill)
-
-
     } else if(data == ("ColdBrew")) {
         if( $(cup).attr("src")=="static/img/cups/coldbrewCup.svg") return
-        animateResult(cup, 1, fill)
-        
-        
+        animateResult(cup, 1, fill)    
     } else if(data == "Espresso" || data == "Turkish") {
         if( $(cup).attr("src")=="static/img/cups/espressoCup.svg") return
-        animateResult(cup, 2, fill)
-        
+        animateResult(cup, 2, fill)   
     }
     
     
