@@ -384,17 +384,26 @@
             
         </div> <!-- End container -->
         
+        <div class="tipHolder"></div>
+        
+        <script>
+            $(function(){
+              $(".tipHolder").load("static/html/tipContent.html"); 
+            });
+            
+        </script>
+        
         <!-- Load json data -->
         <script src="js/coffeedata.json"></script>
+        
+        <!-- Custom Tooltips JS file-->
+        <script src="js/tooltips.js"></script>
                 
         <!-- Donut Chart -->
         <script src="js/donut.js"></script>
         
         <!-- Load main js file -->
         <script src="js/coffee.js"></script>
-        
-        <!-- Custom Tooltips JS file-->
-        <script src="js/tooltips.js"></script>
         
         <!-- Custom Animations -->
         <script type="text/javascript" src="js/animations.js"></script>
