@@ -21,7 +21,7 @@ var caffeine_0 = c3.generate({
             show: true
         },
         min: 0, 
-        max: 243,
+        max: 243.6,
         width: width
     },
     color: {
@@ -54,7 +54,7 @@ var caffeine_1 = c3.generate({
             show: true
         },
         min: 0, 
-        max: 243,
+        max: 243.6,
         width: width
     },
     color: {

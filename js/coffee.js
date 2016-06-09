@@ -697,6 +697,41 @@ $(window).load(function() {
         $(selector).qtip(tip)
 
     }
+    
+    
+    // Add Presets
+    var preset1= {
+         bean: "Arabica",
+         method: "Espresso",
+         roast: "Medium",
+         milk: "CowMilk",
+         sweetener: "Sugar"
+     }
+     
+     var preset2 = {
+         bean: "Robusta",
+         method: "Siphon",
+         roast: "Medium",
+         milk: "SoyMilk",
+         sweetener: "NoSweet"
+     }
+     
+     var preset3 = {
+         bean: "Arabica",
+         method: "ColdBrew",
+         roast: "Dark",
+         milk: "AlmondMilk",
+         sweetener: "Sugar"
+     }
+        
+    dropdownAdd("Cortado")
+    addObj("Cortado", preset1)
+    dropdownAdd("Café au lait")
+    addObj("Café au lait", preset2)
+    dropdownAdd("Toddy Coffee")
+    addObj("Toddy Coffee", preset3)
+    
+    
 
     // Display inital animation
     setOptions(coffeeFlag == "coffee1" ? coffeeSet1 : coffeeSet2)
@@ -731,6 +766,9 @@ $(window).load(function() {
         })
 
     })
+    
+    
+
 
 })
 
@@ -739,3 +777,5 @@ $(".mCustomScrollbar").mCustomScrollbar({
     scrollInertia: 0,
     autoHideScrollbar: false
 });
+
+
