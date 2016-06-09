@@ -278,31 +278,29 @@
 .btn-light {
   background-color: #b0742b;
   border-color: #b0742b;
-    color: white;
+  color: white;
 }
 
 .btn-medium{
   background-color: #764F1F;
   border-color: #764F1F;
-    color: white;
+  color: white;
 }
 
 .btn-dark {
   background-color: #5c3d16;
   border-color: #5c3d16;
-    color: white;
+  color: white;
 }
 
 .btn-save {
-  background-color: #5c3d16;
-  border-color: #5c3d16;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .btn-saved {
-  background-color: #b0742b;
-  border-color: #b0742b;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 
