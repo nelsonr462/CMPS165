@@ -5,14 +5,19 @@
 
 ## Data Sources:
 
-Google
+Milk and Sugar calorie counts/costs:
+Safeway, top Google searches
 
-Safeway
-
+Caffeine Content per Brew:
 http://www.caffeineinformer.com/the-caffeine-database
 
+
+Arabica/Robusta Caffeine Content: 
 https://www.coffeechemistry.com/differences-arabica-and-robusta-coffee
 
-http://www.ico.org/prices/pr-prices.pdf
 
+Specialty Coffee Prices:
+http://www.transparenttradecoffee.org/scrpi
+
+Brew Details: 
 http://coffee-brewing-methods.com/

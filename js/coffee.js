@@ -760,7 +760,7 @@ $(window).load(function() {
         options on the left. To compare to cups, click the other cup to change what\
         goes into it.\
         \n \n \
-        <p style='font-size: 0.7em; padding-top: 1em'>Credit: Nelson Ramirez, Alex Janakos, Jenny Kwok</p>\
+        <p style='font-size: 0.7em; padding-top: 1em'>Credit: Nelson Ramirez, Alex Janakos, Jenny Kwok, Suresh Lodha @ UCSC</p>\
         <p style='font-size: 0.7em; padding-top: 0.3em'><a href='README.md'>Sources<a></p>",
             html: true
         })
